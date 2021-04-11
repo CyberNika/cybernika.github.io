@@ -1,0 +1,45 @@
+.other-show {
+  &-content {
+    padding: 4px;
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-col {
+    flex: 1;
+    padding: 0 20px;
+    text-align: left;
+    overflow: hidden;
+
+    & + & {
+      border-left: 1px solid var(--border-primary);
+    }
+
+    &-title {
+      font-weight: bolder;
+      font-size: 22px;
+    }
+
+    &-main {
+      margin-top: 20px;
+      line-height: 1.2;
+
+      li {
+        & + li {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+
+  &-comment {
+    margin-top: 30px;
+
+    &-title {
+      line-height: 1.5;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+}

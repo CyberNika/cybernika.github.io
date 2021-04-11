@@ -1,0 +1,50 @@
+{
+  "name": "heynext.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "heynext's homepage",
+  "author": "heynext <heynext.xyz@gmail.com>",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "gatsby build && gh-pages -d public -b ghpages",
+    "prettier": "prettier --write 'src/**/*.{css,md,json}'",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}'"
+  },
+  "dependencies": {
+    "@icon-park/react": "^1.3.3",
+    "classnames": "^2.3.1",
+    "echarts": "^5.0.2",
+    "gatsby": "^3.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "reset.css": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "gatsby-plugin-google-analytics": "^3.2.0",
+    "gatsby-plugin-less": "^5.2.0",
+    "gatsby-plugin-manifest": "^3.2.0",
+    "gatsby-plugin-react-helmet": "^4.2.0",
+    "gatsby-plugin-sitemap": "^3.2.0",
+    "gatsby-source-filesystem": "^3.2.0",
+    "gatsby-transformer-remark": "^3.2.0",
+    "gh-pages": "^3.1.0",
+    "typescript": "^4.2.4"
+  }
+}

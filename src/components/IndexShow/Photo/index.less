@@ -1,0 +1,41 @@
+.photo {
+  margin-top: 40px;
+
+  &s {
+    margin: 40px -6px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: 4s linear infinite alternate slideFlow;
+    cursor: pointer;
+  }
+
+  &-item {
+    position: relative;
+    margin: 6px;
+    height: 200px;
+    border-radius: 6px;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      box-shadow: inset 0 0 42px rgba(0, 0, 0, 0.6);
+      z-index: 2;
+    }
+
+    &-label {
+      position: absolute;
+      bottom: 12px;
+      left: 16px;
+      color: #fff;
+      text-shadow: 0 0 6px #333;
+    }
+  }
+}
