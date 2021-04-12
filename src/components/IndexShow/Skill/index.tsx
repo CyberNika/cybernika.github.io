@@ -23,7 +23,9 @@ const SkillShow = () => {
         <p>认为不断尝试和勇于探险可以让我们成长</p>
       </h3>
 
-      <div ref={skillChartRef} className="skill-chart" />
+      <div className="skill-chart-container">
+        <div ref={skillChartRef} className="skill-chart" />
+      </div>
     </div>
   );
 };

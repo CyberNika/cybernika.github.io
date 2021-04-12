@@ -1,11 +1,22 @@
+@import "@/assets/styles/variables.less";
+
 .skill {
   &-show {
     margin-bottom: 40px;
   }
 
   &-chart {
+    &-container {
+      overflow-x: auto;
+    }
+
     margin-top: 60px;
-    width: 100%;
-    height: 35vh;
+    width: 220%;
+    height: 320px;
+
+    @media @tablet {
+      width: 100%;
+      height: 35vh;
+    }
   }
 }

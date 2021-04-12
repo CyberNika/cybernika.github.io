@@ -13,8 +13,8 @@ const About = () => {
 
       <Layout>
         <div className="container about-container">
-          <div className="about-content">
-            <div className="about-left">
+          <div className="about-content animate__animated animate__fadeIn animate__slow">
+            <div className="about-photo-container">
               <img src={ME} className="about-photo" />
             </div>
 

@@ -59,14 +59,14 @@ const Layout: FC = ({ children }) => {
       <main className="main">{children}</main>
 
       <footer className="footer container">
-        <span>
+        <span className="copyright">
           © 2017-2021 | <a href="https://heynext.xyz">HEYNEXT.XYZ</a> |&nbsp;
           <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
             京ICP备18064894号-1
           </a>
         </span>
 
-        <span className="mono">
+        <span className="mono author">
           Created with ❤ by{" "}
           <a href="https://github.com/heynext" target="__blank">
             Stephen

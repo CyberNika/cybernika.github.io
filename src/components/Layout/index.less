@@ -1,3 +1,5 @@
+@import "@/assets/styles/variables.less";
+
 .menu-item-active {
   opacity: 1;
   font-weight: bold;
@@ -65,15 +67,41 @@
 }
 
 .main {
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 66px);
+
+  @media @tablet {
+    min-height: calc(100vh - 74px);
+  }
+
+  @media @laptop {
+    min-height: calc(100vh - 63px);
+  }
 }
 
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  align-items: center;
   border-top: 1px solid var(--border-primary);
   color: var(--text-weak);
-  font-size: 14px;
+  font-size: 12px;
+
+  .copyright {
+    margin-top: 5px;
+    order: 2;
+  }
+
+  @media @tablet {
+    font-size: 14px;
+  }
+
+  @media @laptop {
+    flex-direction: row;
+
+    .copyright {
+      margin-top: 0;
+      order: 0;
+    }
+  }
 }

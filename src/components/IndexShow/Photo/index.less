@@ -1,3 +1,5 @@
+@import "@/assets/styles/variables.less";
+
 .photo {
   margin-top: 40px;
 
@@ -13,9 +15,17 @@
   &-item {
     position: relative;
     margin: 6px;
-    height: 200px;
+    height: 80px;
     border-radius: 6px;
     overflow: hidden;
+
+    @media @tablet {
+      height: 100px;
+    }
+
+    @media @laptop {
+      height: 180px;
+    }
 
     &::after {
       content: '';

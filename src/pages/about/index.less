@@ -1,22 +1,48 @@
+@import "@/assets/styles/variables.less";
+
 .about-container {
-  padding-top: 80px;
+  padding-top: 65px;
+
+  @media @tablet {
+    padding-top: 70px;
+  }
+
+  @media @laptop {
+    padding-top: 80px;
+  }
 }
 
 .about-content {
-  padding: 50px 40px;
+  padding: 25px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
   border-radius: 8px;
   background-color: rgba(#fbf4cd, 0.15);
   overflow: hidden;
-}
 
-.about-left {
-  width: 50%;
-  float: left;
-  margin-right: 25px;
+
+  @media @tablet {
+    padding: 40px 30px;
+  }
+
+  @media @laptop {
+    padding: 50px 40px;
+  }
 }
 
 .about-photo {
   border-radius: 4px;
+
+  &-container {
+    margin-bottom: 12px;
+
+    @media @tablet {
+      width: 50%;
+      float: left;
+      margin-right: 25px;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .about-main {
