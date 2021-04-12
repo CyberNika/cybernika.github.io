@@ -18,6 +18,7 @@ const OtherShow = () => {
       repo: "heynext.github.io",
       owner: "heynext",
       admin: ["heynext"],
+      number: 4,
     });
 
     gitalk.render("gitalk-container");
