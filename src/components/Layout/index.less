@@ -28,8 +28,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(25px);
+  background-color: rgba(var(--background-body-rgb), 0.98);
   z-index: 100;
+
+  @supports (backdrop-filter: blur(25px)){
+    backdrop-filter: blur(25px);
+    background-color: transparent;
+  }
 
   &-left {
     cursor: pointer;

@@ -3,8 +3,8 @@ import axios from "axios";
 import echarts, { ECOption } from "@/utils/chart";
 
 const MAP_DATA_URLS = {
-  china: "https://unpkg.com/echarts@4.4.0/map/json/china.json",
-  world: "https://unpkg.com/echarts@4.4.0/map/json/world.json",
+  china: "https://unpkg.com/echarts@4.9.0/map/json/china.json",
+  world: "https://unpkg.com/echarts@4.9.0/map/json/world.json",
 };
 
 const TRAVEL_FOOTPRINT = {
@@ -247,23 +247,15 @@ const makeTravelMapOptions = (data, map) => ({
       color: "#fff",
     },
   },
-  // roam: 'scale',
   geo: {
     map,
-    label: {
-      // hover 上去的时候样式
-      emphasis: {
-        // show: false,
+    emphasis: {
+      itemStyle: {
+        areaColor: "rgba(245, 244, 237, 0.9)",
       },
     },
     itemStyle: {
-      normal: {
-        areaColor: "#fffef7",
-      },
-      // hover 上去的时候样式
-      emphasis: {
-        areaColor: "#fbf8ef",
-      },
+      areaColor: "rgba(255, 254, 247, 0.8)",
     },
   },
   series: [

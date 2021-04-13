@@ -130,12 +130,12 @@ export const renderSkillKeywordsChart = (container) => {
         data,
         links,
         categories,
-        focusNodeAdjacency: true,
+        emphasis: {
+          focus: "adjacency",
+        },
         label: {
-          normal: {
-            show: true,
-            position: "top",
-          },
+          show: true,
+          position: "top",
         },
       },
     ],

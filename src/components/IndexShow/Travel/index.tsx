@@ -1,14 +1,14 @@
 import classNames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
-import { MapDraw, World } from "@icon-park/react";
+import { TwoTriangles, Planet } from "@icon-park/react";
 
 import { renderChinaTravelMap, renderWorldTravelMap } from "./utils";
 
 import "./index.less";
 
 const TRAVEL_MAP_TYPES = [
-  { value: "CHINA", title: "中国", icon: MapDraw },
-  { value: "WORLD", title: "世界", icon: World },
+  { value: "CHINA", title: "中国", icon: TwoTriangles },
+  { value: "WORLD", title: "世界", icon: Planet },
 ];
 
 const TravelShow = () => {

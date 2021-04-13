@@ -10,18 +10,17 @@ export default function HTML(props) {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
         />
         <link
           rel="stylesheet"
           href="https://cdn.staticfile.org/animate.css/4.1.1/animate.min.css"
         />
-        <script src="https://cdn.staticfile.org/echarts/5.0.2/echarts.min.js" />
         <link
           rel="stylesheet"
-          href="https://unpkg.com/gitalk/dist/gitalk.css"
+          href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css"
         />
-        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js" />
+        <script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
