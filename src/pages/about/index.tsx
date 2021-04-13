@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 import Layout from "@/components/Layout";
 import Helmet from "@/components/Helmet";
@@ -38,9 +39,9 @@ const About = () => {
               </p>
               <p>
                 你可以给我
-                <a href="/#say-hi" className="bold">
+                <Link to="/#say-hi" className="bold">
                   留言
-                </a>
+                </Link>
                 ，也可以通过电子邮箱{" "}
                 <a href="mailto:stephen.zxb@gmail.com">stephen.zxb@gmail.com</a>{" "}
                 或是微信 stephen_zxb 找到我。希望我们有机会可以聊一聊。

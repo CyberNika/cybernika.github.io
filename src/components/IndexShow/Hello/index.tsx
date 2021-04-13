@@ -1,5 +1,6 @@
 import React, { MouseEvent } from "react";
 import { DoubleDown } from "@icon-park/react";
+import { Link } from "gatsby";
 
 import "./index.less";
 
@@ -18,7 +19,9 @@ const HelloShow = () => {
       <div className="content animate__animated animate__fadeIn animate__slow">
         <h1 className="title">
           <p>嗨，我是 Stephen</p>
-          <p>很开心在这里遇见你 🎈</p>
+          <p>
+            很开心在这里<span className="meet-you">遇见你 🎈</span>
+          </p>
         </h1>
 
         <p className="introduction serif">
@@ -35,9 +38,9 @@ const HelloShow = () => {
           ，或者看看我的
           <a className="anchor disabled">作品</a>
           ，或是简单打个
-          <a className="anchor" href="/#say-hi">
+          <Link className="anchor" to="/#say-hi">
             招呼
-          </a>
+          </Link>
           &nbsp;😉
         </p>
       </div>

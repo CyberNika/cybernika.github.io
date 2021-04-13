@@ -18,8 +18,19 @@ const TravelShow = () => {
   const travelMapWorldRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    renderChinaTravelMap(travelMapChinaRef.current!);
-    renderWorldTravelMap(travelMapWorldRef.current!);
+    const chinaChart = renderChinaTravelMap(travelMapChinaRef.current!);
+    const worldChart = renderWorldTravelMap(travelMapWorldRef.current!);
+
+    const handleResize = () => {
+      chinaChart.resize();
+      worldChart.resize();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
