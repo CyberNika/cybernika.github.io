@@ -13,6 +13,11 @@ const TRAVEL_FOOTPRINT = {
    */
 
   // 中国
+  北京: {
+    country: "China",
+    value: 18,
+    geo: [116.399589, 39.925533],
+  },
   西安: {
     country: "China",
     value: 12,
@@ -50,7 +55,7 @@ const TRAVEL_FOOTPRINT = {
   },
   洛阳: {
     country: "China",
-    value: 20,
+    value: 22,
     geo: [112.434468, 34.663041],
   },
   郑州: {
@@ -78,10 +83,25 @@ const TRAVEL_FOOTPRINT = {
     value: 2,
     geo: [121.391382, 37.539297],
   },
-  无锡: {
+  青岛: {
     country: "China",
     value: 1,
+    geo: [120.404981, 36.099294],
+  },
+  日照: {
+    country: "China",
+    value: 1,
+    geo: [119.543766, 35.408719],
+  },
+  无锡: {
+    country: "China",
+    value: 2,
     geo: [120.301663, 31.574729],
+  },
+  苏州: {
+    country: "China",
+    value: 2,
+    geo: [120.60851, 31.306033],
   },
   金华: {
     country: "China",
@@ -93,15 +113,35 @@ const TRAVEL_FOOTPRINT = {
     value: 1,
     geo: [118.11022, 24.490474],
   },
+  广州: {
+    country: "China",
+    value: 1,
+    geo: [113.269129, 23.130019],
+  },
   深圳: {
     country: "China",
     value: 1,
     geo: [114.085947, 22.547],
   },
+  珠海: {
+    country: "China",
+    value: 1,
+    geo: [113.584066, 22.282183],
+  },
   上海: {
     country: "China",
-    value: 6,
+    value: 8,
     geo: [121.472644, 31.231706],
+  },
+  三亚: {
+    country: "China",
+    value: 1,
+    geo: [109.513961, 18.2472],
+  },
+  天水: {
+    country: "China",
+    value: 1,
+    geo: [105.758442, 34.584083],
   },
 
   // 日本
@@ -113,7 +153,7 @@ const TRAVEL_FOOTPRINT = {
   大阪: {
     country: "Japan",
     value: 1,
-    geo: [135.50389, 34.689939],
+    geo: [135.50274, 34.698487],
   },
   京都: {
     country: "Japan",
@@ -134,6 +174,11 @@ const TRAVEL_FOOTPRINT = {
     country: "Japan",
     value: 1,
     geo: [139.500703, 35.305921],
+  },
+  小松: {
+    country: "Japan",
+    value: 1,
+    geo: [136.498036, 36.377734],
   },
 
   // 新加坡
