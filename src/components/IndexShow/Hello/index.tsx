@@ -15,7 +15,7 @@ const HelloShow = () => {
   };
 
   return (
-    <div className="container hello-show">
+    <div className="container container-R hello-show">
       <div className="content animate__animated animate__fadeIn animate__slow">
         <h1 className="title">
           <p>嗨，我是 Stephen</p>

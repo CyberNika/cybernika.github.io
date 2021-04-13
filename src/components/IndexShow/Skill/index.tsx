@@ -33,7 +33,7 @@ const SkillShow = () => {
       <h3 className="show-title serif">
         <p>我钟爱挑战</p>
         <p>
-          认为不断尝试和勇于探险<span className="magic">可以让我们成长</span>
+          认为不断尝试和勇于探索<span className="magic">可以让我们成长</span>
         </p>
       </h3>
 

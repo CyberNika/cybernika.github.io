@@ -39,7 +39,7 @@ const PHOTOS = [
 
 const PhotoShow = () => {
   return (
-    <div className="container show photo-show">
+    <div className="container container-R show photo-show">
       <h3 className="show-title serif">
         <p>
           灵魂和身体<span className="magic">总有一个要在路上</span>

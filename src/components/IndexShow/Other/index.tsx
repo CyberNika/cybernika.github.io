@@ -67,7 +67,7 @@ const OtherShow = () => {
         </div>
       </div> */}
 
-      <div id="say-hi" className="container other-show-comment">
+      <div id="say-hi" className="container container-R other-show-comment">
         <h3 className="other-show-comment-title serif">
           <p>给我留言</p>
         </h3>

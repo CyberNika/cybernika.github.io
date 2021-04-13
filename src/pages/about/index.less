@@ -20,12 +20,12 @@
   background-color: rgba(#fbf4cd, 0.2);
   overflow: hidden;
 
-
   @media @tablet {
     padding: 40px 30px;
   }
 
-  @media @laptop {
+  @media @desktop {
+    display: flex;
     padding: 50px 40px;
   }
 }
@@ -42,11 +42,19 @@
       margin-right: 25px;
       margin-bottom: 0;
     }
+
+    @media @desktop {
+      float: none;
+    }
   }
 }
 
 .about-main {
   margin-top: -4px;
+
+  @media @desktop {
+    flex: 1;
+  }
 
   p {
     line-height: 1.5;

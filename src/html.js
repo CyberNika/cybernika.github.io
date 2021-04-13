@@ -21,6 +21,11 @@ export default function HTML(props) {
           href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css"
         />
         <script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1279840633'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1279840633' type='text/javascript'%3E%3C/script%3E"));`,
+          }}
+        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
