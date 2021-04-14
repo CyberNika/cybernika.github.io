@@ -10,7 +10,7 @@ import "./index.less";
 const About = () => {
   return (
     <>
-      <Helmet title="关于" />
+      <Helmet title="关于我" />
 
       <Layout>
         <div className="container about-container">

@@ -12,7 +12,6 @@ const TITLE = "你好 · 世界 | 你好 · 未来";
 const Helmet: FC<HelmetProps> = ({ title = TITLE, children }) => {
   return (
     <ReactHelmet>
-      <meta charSet="utf-8" />
       <title>{title}</title>
 
       {children}
