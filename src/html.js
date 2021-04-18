@@ -13,7 +13,7 @@ export default function HTML(props) {
         />
         <meta
           name="keywords"
-          content="heynext,博客,前端,JavaScript,旅行，你好世界"
+          content="heynext,博客,前端,JavaScript,旅行,你好世界,赵学兵,Stephen"
           id="metakeywords"
         />
         <meta name="description" content="HEYNEXT 的个人主页" id="metadesc" />
