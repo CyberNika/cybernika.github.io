@@ -35,17 +35,20 @@ const SKILLS = [
   { name: "Taro", category: "小程序", x: 58, y: -15 },
   { name: "mpvue", category: "小程序", x: 56, y: -8 },
 
+  { name: "微前端", category: "Web 前端", x: 50, y: 8 },
+
   /**
    * 服务端
    */
+  { name: "Golang", category: "服务端", x: 15, y: -13 },
+  { name: "Java", category: "服务端", x: 25, y: -10 },
+  { name: "PHP", category: "服务端", x: 23, y: 10 },
   { name: "Python", category: "服务端", x: 12, y: 4 },
-  { name: "Java", category: "服务端", x: 25, y: 12 },
-  { name: "PHP", category: "服务端", x: 17, y: -15 },
 
   /**
    * 客户端
    */
-  { name: "Flutter", category: "客户端", x: 75, y: -10 },
+  { name: "Flutter", category: "客户端", x: 71, y: -10 },
   { name: "Kotlin", category: "客户端", x: 82, y: 15 },
   { name: "Swift", category: "客户端", x: 78, y: 6 },
 
@@ -65,9 +68,10 @@ const SKILLS = [
   { name: "Lightroom", category: "摄影", x: 90, y: -12 },
 
   { name: "设计", category: "艺术", x: 95, y: 10 },
-  { name: "Axure", category: "设计", x: 96, y: 18 },
+  { name: "Axure", category: "设计", x: 100, y: 11 },
   { name: "Sketch", category: "设计", x: 92, y: 15 },
   { name: "Adobe XD", category: "设计", x: 90, y: 5 },
+  { name: "Figma", category: "设计", x: 86, y: 8 },
 
   { name: "音乐", category: "艺术", x: 105, y: -5 },
   { name: "口琴", category: "音乐", x: 102, y: -12 },
@@ -78,6 +82,7 @@ const SKILLS = [
    */
   { name: "滑雪", category: "运动", x: 10, y: 10 },
   { name: "滑板", category: "运动", x: 10, y: -5 },
+  { name: "跑酷", category: "运动", x: 5, y: -5 },
   { name: "Poppin", category: "运动", x: 5, y: -15 },
 ];
 
