@@ -102,6 +102,11 @@ const TRAVEL_FOOTPRINT = {
     value: 1,
     geo: [119.543766, 35.408719],
   },
+  连云港: {
+    country: "China",
+    value: 1,
+    geo: [119.240633, 34.587221],
+  },
 
   // 华中区：河南、湖北、湖南
   // 河南
@@ -142,10 +147,35 @@ const TRAVEL_FOOTPRINT = {
   },
   // 广西
   // 海南
-  三亚: {
+  海口: {
     country: "China",
     value: 1,
+    geo: [110.340941, 20.072883],
+  },
+  三亚: {
+    country: "China",
+    value: 2,
     geo: [109.513961, 18.2472],
+  },
+  文昌: {
+    country: "China",
+    value: 1,
+    geo: [110.803934, 19.547427],
+  },
+  琼海: {
+    country: "China",
+    value: 1,
+    geo: [110.481981, 19.257193],
+  },
+  万宁: {
+    country: "China",
+    value: 1,
+    geo: [110.387695, 18.78911],
+  },
+  陵水: {
+    country: "China",
+    value: 1,
+    geo: [110.040446, 18.510696],
   },
 
   // 西南区：重庆、四川、贵州、云南、西藏
@@ -157,6 +187,11 @@ const TRAVEL_FOOTPRINT = {
   // 四川
   // 贵州
   // 云南
+  昆明: {
+    country: "China",
+    value: 1,
+    geo: [102.85784, 24.86739],
+  },
   丽江: {
     country: "China",
     value: 1,
