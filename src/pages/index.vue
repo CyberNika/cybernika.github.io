@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import Hello from './components/Hello.vue'
+import Travel from './components/Travel.vue'
+import Skill from './components/Skill.vue'
+import Photo from './components/Photo.vue'
+import Other from './components/Other.vue'
+
 import { useUserStore } from '~/stores/user'
 
 const user = useUserStore()
@@ -14,22 +20,14 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div>
-    <div text-4xl>
-      <div i-carbon-campsite inline-block />
-    </div>
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-        Vitesse
-      </a>
-    </p>
-    <p>
-      <em text-sm opacity-75>{{ t('intro.desc') }}</em>
-    </p>
+  <div class="home">
+    <Hello />
+    <Travel />
+    <Skill />
+    <Photo />
+    <Other />
 
-    <div py-4 />
-
-    <input
+    <!-- <input
       id="input"
       v-model="name"
       :placeholder="t('intro.whats-your-name')"
@@ -43,17 +41,25 @@ const { t } = useI18n()
       border="~ rounded gray-200 dark:gray-700"
       outline="none active:none"
       @keydown.enter="go"
-    >
-    <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
-
-    <div>
-      <button
-        btn m-3 text-sm
-        :disabled="!name"
-        @click="go"
-      >
-        {{ t('button.go') }}
-      </button>
-    </div>
+    > -->
   </div>
 </template>
+
+<style>
+.home-section {
+  @apply wrapper relative flex flex-col justify-center font-serif text-center;
+}
+
+.home-section-title {
+  @apply text-2xl;
+  @apply lg:text-3xl;
+}
+
+.home-section-title + .home-section-title {
+  @apply mt-2xl;
+}
+
+.home-section-title-magic {
+  @apply block sm:inline;
+}
+</style>

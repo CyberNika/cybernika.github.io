@@ -1,0 +1,21 @@
+@keyframes zoomAndSlideInDown {
+  from {
+    transform: translateY(-25%) scale(0.8);
+    opacity: 0.6;
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFlow {
+  from {
+    transform: translate3d(-20px, 0, 0);
+  }
+
+  to {
+    transform: translate3d(20px, 0, 0);
+  }
+}

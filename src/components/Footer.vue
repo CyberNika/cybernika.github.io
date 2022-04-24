@@ -4,19 +4,19 @@ const { t } = useI18n()
 
 <template>
   <footer
-    flex justify-between items-center flex-col
-    py-5 px-10
-    border-t border-t-gray-300
-    text-xs text-gray-400 font-mono
-    xl:flex-row
-    sm:text-sm
+    flex="~ col xl:row"
+    justify-between items-center
+    p="y5 x10"
+    border="t-1 t-gray-300"
+    text="xs sm:sm gray-400"
+    font="mono"
   >
     <span
-      mt-1 order-2
-      xl:order-none xl:mt-0
+      order="2 xl:none"
+      m="t-1 xl:t-0"
     >
-      © 2017-2021 |
-      <a href="https://heynext.xyz">HEYNEXT.XYZ</a> |
+      © 2017-2022 |
+      <a href="https://superstack.pro">SUPERSTACK.PRO</a> |
       <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
         京ICP备18064894号-1
       </a>
@@ -24,7 +24,7 @@ const { t } = useI18n()
 
     <span>
       Created with ❤ by
-      <a href="https://github.com/heynext" target="__blank">
+      <a href="https://github.com/SuperStackPro" target="__blank">
         Stephen
       </a>
     </span>
