@@ -9,13 +9,3 @@
     opacity: 1;
   }
 }
-
-@keyframes slideFlow {
-  from {
-    transform: translate3d(-20px, 0, 0);
-  }
-
-  to {
-    transform: translate3d(20px, 0, 0);
-  }
-}

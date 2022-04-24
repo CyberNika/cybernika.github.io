@@ -18,6 +18,14 @@ export default defineConfig({
   theme: {
     colors: {
     },
+    animation: {
+      keyframes: {
+        sway: '{from{transform:translate3d(-20px,0,0) }to{transform:translate3d(20px,0,0)}}',
+      },
+      durations: {
+        sway: '4s',
+      },
+    },
   },
   presets: [
     presetUno(),

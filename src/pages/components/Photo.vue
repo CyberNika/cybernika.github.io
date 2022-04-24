@@ -1,61 +1,83 @@
 <script setup lang="ts">
-const goNextPage = (evt: MouseEvent) => {
-  evt.preventDefault()
-
-  window.scrollTo({
-    top: innerHeight,
-    behavior: 'smooth',
-  })
-}
+const photos = [
+  {
+    name: '自然',
+    thumb: '/photos/nature.jpg',
+  },
+  {
+    name: '雪山',
+    thumb: '/photos/mountain-1.jpg',
+  },
+  {
+    name: '建筑',
+    thumb: '/photos/building.jpg',
+  },
+  {
+    name: '街头',
+    thumb: '/photos/city.jpg',
+  },
+  {
+    name: '城市',
+    thumb: '/photos/city-1.jpg',
+  },
+  {
+    name: '人',
+    thumb: '/photos/people.jpg',
+  },
+  {
+    name: '海',
+    thumb: '/photos/sea.jpg',
+  },
+  {
+    name: '夜晚',
+    thumb: '/photos/night.jpg',
+  },
+]
 </script>
 
 <template>
-  <div wrapper mx-auto max-w-screen-xl h-screen font-serif>
-    <div class="content animate__animated animate__fadeIn animate__slow">
-      <h1
-        font-bold
-        text="2xl lg:3xl xl:4xl"
-      >
-        <p>嗨，我是 Stephen</p>
-        <p>
-          很开心在这里<span sm:block>遇见你 🎈</span>
-        </p>
-      </h1>
-
-      <p mt-2 text-lg>
-        我是一个斜杠青年，现居北京，以软件开发为生。梦想成为一条咸鱼，热爱旅行和摄影，对写作和设计都有很大兴趣。正在为未来的角色转变做些努力，希望有一天可以和她一起带只狗子看看这个世界。
+  <div class="home-section">
+    <h3 class="home-section-title">
+      <p>
+        灵魂和身体<span class="home-section-title-magic">总有一个要在路上</span>
       </p>
+      <p>而我，更想让它们相伴而行</p>
+    </h3>
 
-      <p mt-2 text-lg>
-        继续往下，了解更多我的
-        <a href="" font-bold class="anchor" @click="goNextPage">
-          故事
-        </a>
-        。也可以访问我的
-        <a line-through cursor-not-allowed opacity-80>博客</a>
-        ，或者看看我的
-        <a line-through cursor-not-allowed opacity-80>作品</a>
-        ，或是简单打个
-        <Link class-name="anchor" to="/#say-hi">
-          招呼
-        </Link>
-        &nbsp;😉
-      </p>
-    </div>
-
-    <div
-      title="了解更多我的故事"
-      pos="absolute bottom-10 left-2/4"
-      text="lg lg:xl"
-      px-5
-      transform="-translate-y-40"
-      cursor-pointer
-      text-gray-500
+    <ul
+      flex="~ wrap"
+      justify-center
+      m="t-10 -x-2"
+      animate="sway count-infinite alternate"
+      cursor-not-allowed
     >
-      <span
-        i-carbon-chevron-down
-        animate-bounce
-      />
-    </div>
+      <li
+        v-for="item of photos"
+        :key="item.name"
+        class="photo-item"
+        relative m-2
+        h="20 lg:100 xl:180"
+        rounded="md lg:lg" overflow-hidden
+        after:absolute after:left-0 after:top-0
+        after:content-none after:w-full after:h-full
+      >
+        <img
+          :src="item.thumb"
+          :alt="item.name"
+        >
+        <label
+          pos="absolute bottom-2 left-3"
+          text="white shadow-sm"
+        >
+          {{ item.name }}
+        </label>
+      </li>
+    </ul>
   </div>
 </template>
+
+<style>
+.photo-item::after {
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+}
+</style>

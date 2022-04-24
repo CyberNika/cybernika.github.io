@@ -8,3 +8,7 @@ body {
 .dark body {
   background-color: #181c22;
 }
+
+img {
+  @apply max-w-full max-h-full;
+}

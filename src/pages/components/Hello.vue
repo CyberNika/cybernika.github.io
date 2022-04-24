@@ -48,7 +48,7 @@ const goNextPage = (evt: MouseEvent) => {
       pos="absolute bottom-10 left-2/4"
       text="lg lg:xl"
       px-5
-      transform="-translate-y-40"
+      transform="translate-x--1/2"
       cursor-pointer
       text-gray-500
     >
