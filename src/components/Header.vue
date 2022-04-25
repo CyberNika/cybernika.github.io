@@ -25,11 +25,15 @@ const toggleLocales = () => {
     backdrop-blur-lg
     z-30
   >
-    <RouterLink class="icon-btn mx-2" to="/" :title="t('button.home')">
-      <span inline-block i-carbon-campsite text-lg vertical-middle />
+    <RouterLink
+      to="/"
+      opacity-80 hover:opacity-100
+      title="SuperStack"
+    >
+      <span inline-block i-carbon-campsite vertical-middle />
 
-      <h3 inline-block ml-1 vertical-middle font-bold>
-        SuperStack
+      <h3 inline-block ml-1 vertical-middle font-bold text-lg>
+        SUPER STACK
       </h3>
     </RouterLink>
 

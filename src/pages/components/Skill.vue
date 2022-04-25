@@ -1,16 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const travelMapTypes = [
-  { value: 'CHINA', title: '中国', icon: 'i-carbon-map' },
-  { value: 'WORLD', title: '世界', icon: 'i-carbon-earth-southeast-asia' },
-]
-
-const activeMapType = ref(travelMapTypes[0].value)
+import SkillGraph from './SkillGraph.vue'
 </script>
 
 <template>
-  <div class="home-section">
+  <div class="home-section" font-serif text-center>
     <h3 class="home-section-title">
       <p>我热爱编程</p>
       <p>
@@ -25,13 +18,13 @@ const activeMapType = ref(travelMapTypes[0].value)
       </p>
     </h3>
 
-    <div overflow-x-auto mt-15>
-      <div h-320px w-680px lg:w-full lg:h-35vh class="skill-chart">
-        xxxx
-      </div>
+    <div mt-15 overflow-x-auto overflow-y-hidden>
+      <client-only>
+        <SkillGraph
+          h-80 w-155 mx-auto
+          lg:w-full lg:h-35vh
+        />
+      </client-only>
     </div>
   </div>
 </template>
-
-<style>
-</style>

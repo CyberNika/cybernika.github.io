@@ -36,7 +36,7 @@ const photos = [
 </script>
 
 <template>
-  <div class="home-section">
+  <div class="home-section" lg:mt-5 font-serif text-center>
     <h3 class="home-section-title">
       <p>
         灵魂和身体<span class="home-section-title-magic">总有一个要在路上</span>
@@ -56,10 +56,11 @@ const photos = [
         :key="item.name"
         class="photo-item"
         relative m-2
-        h="20 lg:100 xl:180"
+        h="20 sm:25 lg:32 xl:45"
         rounded="md lg:lg" overflow-hidden
         after:absolute after:left-0 after:top-0
         after:content-none after:w-full after:h-full
+        dark:after:shadow-none dark:after:bg-gray-800 dark:after:bg-opacity-30
       >
         <img
           :src="item.thumb"
@@ -67,7 +68,8 @@ const photos = [
         >
         <label
           pos="absolute bottom-2 left-3"
-          text="white shadow-sm"
+          text="white shadow-sm sm sm:md xl:lg"
+          font-sans opacity-80
         >
           {{ item.name }}
         </label>

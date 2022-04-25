@@ -7,7 +7,7 @@ const { t } = useI18n()
     flex="~ col xl:row"
     justify-between items-center
     p="y5 x10"
-    border="t-1 t-gray-300"
+    border="t-1 t-gray-300 dark:t-gray-700"
     text="xs sm:sm gray-400"
     font="mono"
   >

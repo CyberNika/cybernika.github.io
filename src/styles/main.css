@@ -2,13 +2,65 @@
 @import './markdown.css';
 
 body {
-  background-color: #fffef7;
-}
+  @apply antialiased;
 
-.dark body {
-  background-color: #181c22;
+  background-color: #fffef7;
 }
 
 img {
   @apply max-w-full max-h-full;
+}
+
+.dark {
+  body {
+    background-color: #181c22;
+  }
+
+  .gt {
+    &-container {
+      a {
+        color: rgba(#eee, 0.8);
+      }
+
+      .gt-link {
+        border-color: rgba(#eee, 0.8);
+      }
+
+      .gt-meta {
+        border-color: rgba(#eee, 0.4);
+      }
+    }
+
+    &-svg {
+      svg {
+        fill: rgba(#fff, 0.9) !important;
+      }
+    }
+
+    &-header-textarea {
+      color: rgba(#eee, 0.8) !important;
+      background-color: #333 !important;
+    }
+
+    &-popup {
+      border-radius: 4px;
+
+      a {
+        color: #666;
+      }
+    }
+
+    &-comment-content {
+      background-color: #333 !important;
+      border-radius: 4px;
+
+      &:hover {
+        box-shadow: 0 2px 15px 0 rgba(#999, 0.1) !important;
+      }
+
+      .gt-comment-username {
+        color: #666;
+      }
+    }
+  }
 }

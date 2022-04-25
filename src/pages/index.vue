@@ -26,33 +26,18 @@ const { t } = useI18n()
     <Skill />
     <Photo />
     <Other />
-
-    <!-- <input
-      id="input"
-      v-model="name"
-      :placeholder="t('intro.whats-your-name')"
-      :aria-label="t('intro.whats-your-name')"
-      type="text"
-      autocomplete="false"
-      p="x4 y2"
-      w="250px"
-      text="center"
-      bg="transparent"
-      border="~ rounded gray-200 dark:gray-700"
-      outline="none active:none"
-      @keydown.enter="go"
-    > -->
   </div>
 </template>
 
 <style>
 .home-section {
-  @apply wrapper relative flex flex-col justify-center font-serif text-center;
+  @apply wrapper relative flex flex-col justify-center;
 }
 
 .home-section-title {
-  @apply text-2xl;
+  @apply text-2xl font-bold;
   @apply lg:text-3xl;
+  @apply xl:text-4xl;
 }
 
 .home-section-title + .home-section-title {

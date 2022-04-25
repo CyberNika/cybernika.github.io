@@ -1,8 +1,8 @@
 <template>
   <div flex="col" min-h-screen>
-    <Header />
+    <Header pos="fixed top-0 left-0" h-16 w-full />
 
-    <main flex-1>
+    <main>
       <RouterView />
     </main>
 
