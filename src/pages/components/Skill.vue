@@ -3,7 +3,7 @@ import SkillGraph from './SkillGraph.vue'
 </script>
 
 <template>
-  <div class="home-section" font-serif text-center>
+  <div class="home-section" text-center>
     <h3 class="home-section-title">
       <p>我热爱编程</p>
       <p>
@@ -19,12 +19,10 @@ import SkillGraph from './SkillGraph.vue'
     </h3>
 
     <div mt-15 overflow-x-auto overflow-y-hidden>
-      <client-only>
-        <SkillGraph
-          h-80 w-155 mx-auto
-          lg:w-full lg:h-35vh
-        />
-      </client-only>
+      <SkillGraph
+        h-80 w-155 mx-auto
+        lg:w-full lg:h-35vh
+      />
     </div>
   </div>
 </template>

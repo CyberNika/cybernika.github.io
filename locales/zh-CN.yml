@@ -1,14 +1,19 @@
-button:
-  about: 关于
-  back: 返回
-  go: 确定
-  home: 首页
-  toggle_dark: 切换深色模式
-  toggle_langs: 切换语言
-intro:
-  desc: 固执己见的 Vite 项目模板
-  dynamic-route: 动态路由演示
-  hi: 你好，{name}
-  aka: 也叫
-  whats-your-name: 输入你的名字
+header:
+  name: SuperStack
+  slogan: SUPER STACK
+  nav:
+    home: 首页
+    blog: 博客
+    gallery: 作品
+    about: 关于
+    say-hi: 留言
+  button:
+    toggle-mode: 切换深/浅色模式
+    toggle-langs: 切换语言
+home:
+  hello:
+    hi-i-am-stephen: 嗨，我是 Stephen
+    nice-to-meet-you-here:
+      1: 很开心在这里
+      2: 遇见你 🎈
 not-found: 未找到页面

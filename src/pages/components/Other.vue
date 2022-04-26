@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Gitalk from 'gitalk'
 // const links = [
 //   { title: '博客', link: '/blog' },
 //   { title: '作品', link: '/gallery' },
@@ -9,7 +8,7 @@ import Gitalk from 'gitalk'
 // ]
 
 onMounted(() => {
-  const gitalk = new Gitalk({
+  const gitalk = new (window as any).Gitalk({
     clientID: '804e292e507bd1aed363',
     clientSecret: 'cab3e3f17bd07094c51f28bf97ffbe62c072143f',
     repo: 'heynext.github.io',
@@ -30,7 +29,7 @@ onMounted(() => {
       </p>
     </h3>
 
-    <div id="gitalk-container" />
+    <div font-sans id="gitalk-container" />
   </div>
 </template>
 

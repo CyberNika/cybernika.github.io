@@ -2,19 +2,11 @@ import { use } from 'echarts/core'
 import { CanvasRenderer } from 'echarts/renderers'
 import { GraphChart } from 'echarts/charts'
 import {
-  LegendComponent,
-  TitleComponent,
-  TooltipComponent,
-  VisualMapComponent,
 } from 'echarts/components'
 
 use([
   CanvasRenderer,
   GraphChart,
-  TitleComponent,
-  TooltipComponent,
-  LegendComponent,
-  VisualMapComponent,
 ])
 
 const SKILLS = [

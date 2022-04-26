@@ -36,7 +36,7 @@ const photos = [
 </script>
 
 <template>
-  <div class="home-section" lg:mt-5 font-serif text-center>
+  <div class="home-section" lg:mt-5 text-center>
     <h3 class="home-section-title">
       <p>
         灵魂和身体<span class="home-section-title-magic">总有一个要在路上</span>
@@ -48,7 +48,7 @@ const photos = [
       flex="~ wrap"
       justify-center
       m="t-10 -x-2"
-      animate="sway count-infinite alternate"
+      animate-sway animate-count-infinite animate-alternate
       cursor-not-allowed
     >
       <li

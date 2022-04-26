@@ -2,8 +2,6 @@ import { registerMap, use } from 'echarts/core'
 import { CanvasRenderer } from 'echarts/renderers'
 import { MapChart, ScatterChart } from 'echarts/charts'
 import {
-  LegendComponent,
-  TitleComponent,
   TooltipComponent,
   VisualMapComponent,
 } from 'echarts/components'
@@ -18,9 +16,7 @@ use([
   CanvasRenderer,
   ScatterChart,
   MapChart,
-  TitleComponent,
   TooltipComponent,
-  LegendComponent,
   VisualMapComponent,
 ])
 
@@ -404,7 +400,7 @@ const makeTravelMapOptions = (data: CityOption[], map: string) => ({
   visualMap: {
     min: 0,
     max: 25,
-    show: Boolean(localStorage.getItem('showVisualMap')),
+    show: false,
     splitNumber: 5,
     color: ['#d94e5d', '#eac736', '#50a3ba'],
     textStyle: {

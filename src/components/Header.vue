@@ -1,21 +1,21 @@
 <script setup lang="ts">
 import { isDark, toggleDark } from '~/composables'
 
+const { t } = useI18n()
+
 const menus = [
-  { id: 'HOME', title: '首页', link: '/', exact: false },
-  // { id: "BLOG", title: "博客", link: "/blog" },
-  // { id: 'GALLERY', title: '作品', link: '/gallery' },
-  { id: 'ABOUT', title: '关于', link: '/about' },
-  // { id: 'SAY_HI', title: '留言', link: '/say-hi' },
+  { id: 'HOME', title: t('header.nav.home'), link: '/', exact: false },
+  // { id: "BLOG", title: t('header.nav.blog'), link: "/blog" },
+  // { id: 'GALLERY', title: t('header.nav.gallery'), link: '/gallery' },
+  { id: 'ABOUT', title: t('header.nav.about'), link: '/about' },
+  // { id: 'SAY_HI', title: t('header.nav.say-hi'), link: '/say-hi' },
 ]
 
-const { t, availableLocales, locale } = useI18n()
-
-const toggleLocales = () => {
-  // change to some real logic
-  const locales = availableLocales
-  locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
-}
+// const toggleLocales = () => {
+//   // change to some real logic
+//   const locales = availableLocales
+//   locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
+// }
 </script>
 
 <template>
@@ -27,13 +27,13 @@ const toggleLocales = () => {
   >
     <RouterLink
       to="/"
-      opacity-80 hover:opacity-100
-      title="SuperStack"
+      font-bold text-lg
+      :title="t('header.name')"
     >
       <span inline-block i-carbon-campsite vertical-middle />
 
-      <h3 inline-block ml-1 vertical-middle font-bold text-lg>
-        SUPER STACK
+      <h3 inline-block ml-1 vertical-middle>
+        {{ t('header.slogan') }}
       </h3>
     </RouterLink>
 
@@ -71,6 +71,7 @@ const toggleLocales = () => {
           opacity-50 cursor-pointer
           hover:opacity-100 hover:font-bold
           i-carbon-sun dark:i-carbon-moon
+          :title="t('header.button.toggle-mode')"
           @click="toggleDark()"
         />
       </ul>
