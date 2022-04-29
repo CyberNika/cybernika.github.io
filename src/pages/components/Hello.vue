@@ -6,7 +6,6 @@ const goNextPage = (evt: MouseEvent) => {
 
   window.scrollTo({
     top: innerHeight,
-    behavior: 'smooth',
   })
 }
 </script>
@@ -16,10 +15,10 @@ const goNextPage = (evt: MouseEvent) => {
     class="home-section"
     h-screen
   >
-    <div class="content animate__animated animate__fadeIn animate__slow">
+    <div content animate-fade-in animate-count-1 animate-duration-1s>
       <h1
         font-bold
-        leading="tight lg:tight"
+        leading="tight"
         text="4xl lg:5xl"
       >
         <p>{{ t('home.hello.hi-i-am-stephen') }}</p>
@@ -34,13 +33,17 @@ const goNextPage = (evt: MouseEvent) => {
 
       <p mt-3 text-xl>
         <span>继续往下，了解更多我的</span>
-        <a href="" font-bold class="anchor" @click="goNextPage">故事</a>
+        <a class="anchor" href="" @click="goNextPage">故事</a>
         <span>。也可以访问我的</span>
-        <a line-through cursor-not-allowed opacity-80>博客</a>
+        <RouterLink class="anchor" to="/blog">
+          <span>博客</span>
+        </RouterLink>
         <span>，或者看看我的</span>
         <a line-through cursor-not-allowed opacity-80>作品</a>
         <span>，或是简单打个</span>
-        <RouterLink class-name="anchor" to="/#say-hi">招呼</RouterLink>
+        <RouterLink class="anchor" to="/say-hi">
+          <span>招呼</span>
+        </RouterLink>
         😉
       </p>
     </div>
@@ -62,3 +65,12 @@ const goNextPage = (evt: MouseEvent) => {
     </div>
   </div>
 </template>
+
+<style scoped>
+.anchor {
+  @apply underline underline-offset-5 font-bold;
+  @apply decoration-1 decoration-divider-light;
+  @apply dark:decoration-divider-dark;
+  @apply hover:opacity-90;
+}
+</style>

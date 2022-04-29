@@ -18,7 +18,7 @@ import SkillGraph from './SkillGraph.vue'
       </p>
     </h3>
 
-    <div mt-15 overflow-x-auto overflow-y-hidden>
+    <div mt-10 overflow-x-auto overflow-y-hidden>
       <SkillGraph
         h-80 w-155 mx-auto
         lg:w-full lg:h-35vh

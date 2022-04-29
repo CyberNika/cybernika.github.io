@@ -36,7 +36,7 @@ const photos = [
 </script>
 
 <template>
-  <div class="home-section" lg:mt-5 text-center>
+  <div class="home-section" text-center>
     <h3 class="home-section-title">
       <p>
         灵魂和身体<span class="home-section-title-magic">总有一个要在路上</span>

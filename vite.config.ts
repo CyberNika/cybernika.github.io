@@ -7,14 +7,15 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'vite-plugin-md'
-import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
+import Anchor from 'markdown-it-anchor'
+import string from 'string'
 import Unocss from 'unocss/vite'
 
-const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
+import viteBlogPlugin from './scripts/vite-plugin-blog'
 
 export default defineConfig({
   resolve: {
@@ -24,6 +25,8 @@ export default defineConfig({
   },
 
   plugins: [
+    viteBlogPlugin(),
+
     Vue({
       include: [/\.vue$/, /\.md$/],
       reactivityTransform: true,
@@ -31,7 +34,27 @@ export default defineConfig({
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
+      dirs: ['src/pages', 'posts'],
       extensions: ['vue', 'md'],
+      exclude: ['**/components/*.vue'],
+      extendRoute: (route) => {
+        if (route.component.startsWith('/posts/')) {
+          return {
+            ...route,
+            meta: { ...route.meta, layout: 'blog', postKey: route.component.slice(7, -3) },
+          }
+        }
+
+        return route
+      },
+      onRoutesGenerated: (routes) => {
+        return routes.map(route => route.component.startsWith('/posts/')
+          ? {
+              ...route,
+              path: `/blog${route.path}`,
+            }
+          : route)
+      },
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
@@ -52,25 +75,30 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-vue-components
     Components({
-      // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
-      // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
     }),
 
     // https://github.com/antfu/unocss
-    // see unocss.config.ts for config
     Unocss(),
 
     // https://github.com/antfu/vite-plugin-md
-    // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
     Markdown({
-      wrapperClasses: markdownWrapperClasses,
+      wrapperClasses: 'prose',
       headEnabled: true,
+      markdownItOptions: {
+        breaks: true,
+      },
       markdownItSetup(md) {
         // https://prismjs.com/
         md.use(Prism)
+        md.use(Anchor, {
+          permalink: true,
+          permalinkSymbol: '#',
+          // permalinkBefore: true,
+          slugify: (s: string) => string(s).slugify().toString(),
+        })
         md.use(LinkAttributes, {
           matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
@@ -78,35 +106,6 @@ export default defineConfig({
             rel: 'noopener',
           },
         })
-      },
-    }),
-
-    // https://github.com/antfu/vite-plugin-pwa
-    VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
-      manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
-        theme_color: '#ffffff',
-        icons: [
-          {
-            src: '/pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable',
-          },
-        ],
       },
     }),
 
@@ -118,7 +117,6 @@ export default defineConfig({
     }),
 
     // https://github.com/antfu/vite-plugin-inspect
-    // Visit http://localhost:3333/__inspect/ to see the inspector
     Inspect(),
   ],
 
@@ -127,5 +125,10 @@ export default defineConfig({
     script: 'async',
     formatting: 'minify',
     onFinished() { generateSitemap() },
+    includedRoutes(paths, routes) {
+      return routes.flatMap((route) => {
+        return route.path
+      })
+    },
   },
 })

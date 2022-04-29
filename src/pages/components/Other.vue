@@ -6,32 +6,53 @@
 //   { title: '源码', link: 'https://github.com/snokier/site' },
 //   { title: '关于', link: '/about' },
 // ]
-
-onMounted(() => {
-  const gitalk = new (window as any).Gitalk({
-    clientID: '804e292e507bd1aed363',
-    clientSecret: 'cab3e3f17bd07094c51f28bf97ffbe62c072143f',
-    repo: 'heynext.github.io',
-    owner: 'heynext',
-    admin: ['heynext'],
-    number: 4,
-  })
-
-  gitalk.render('gitalk-container')
-})
 </script>
 
 <template>
-  <div class="home-section" mt-5>
+  <div id="say-hi" class="home-section">
     <h3 class="home-section-title" font-serif text-center>
-      <p>
-        给我留言
-      </p>
+      <p>想了解更多</p>
+      <p>或许可以在这里找到</p>
     </h3>
 
-    <div font-sans id="gitalk-container" />
+    <!-- <div class="other-show-content serif">
+      <div style="{{" flex: 2 }} class="other-show-col">
+        <h3 class="other-show-col-title">
+          关于
+        </h3>
+
+        <div />
+      </div>
+
+      <div style="{{" flex: 3, flexShrink: 0 }} class="other-show-col">
+        <h3 class="other-show-col-title">
+          链接
+        </h3>
+
+        <div class="other-show-col-main">
+          <ul>
+            {LINKS.map((item) => (
+            <li key="{item.link}">
+              <p>
+                <a title="{item.title}" href="{item.link}" target="__blank">
+                  {item.title}
+                </a>
+              </p>
+            </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div style="{{" flex: 4, flexShrink: 0 }} class="other-show-col">
+        <h3 class="other-show-col-title">
+          二维码
+        </h3>
+
+        <div class="other-show-col-main">
+          <img src="qrcode" alt="二维码">
+        </div>
+      </div>
+    </div> -->
   </div>
 </template>
-
-<style>
-</style>

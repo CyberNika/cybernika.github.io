@@ -11,10 +11,25 @@ import {
 
 export default defineConfig({
   shortcuts: [
-    ['wrapper', 'px-6 py-4 sm:px-10 sm:py-5 md:px-15 xl:py-6'],
+    ['wrapper-l', 'pl-6 sm:pl-10 md:pl-15 xl:pl-20 2xl:pl-40'],
+    ['wrapper-r', 'pr-6 sm:pr-10 md:pr-15 xl:pr-20 2xl:pr-40'],
+    ['wrapper-x', 'wrapper-l wrapper-r'],
+    ['wrapper-t', 'pt-4 sm:pt-5 xl:pt-6'],
+    ['wrapper-b', 'pb-4 sm:pb-5 xl:pb-6'],
+    ['wrapper-y', 'wrapper-t wrapper-b'],
+    ['wrapper', 'wrapper-x wrapper-y'],
+    ['content', 'm-x-auto max-w-screen-lg'],
+    ['page-title', 'text-4xl font-bold font-serif mb-6'],
   ],
   theme: {
     colors: {
+      // brand: '#be123c',
+      brand: '#475569',
+      divider: {
+        light: '#475569',
+        dark: '#e2e8f0',
+      },
+      // brand: '#c2410c',
     },
     animation: {
       keyframes: {
@@ -45,5 +60,5 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
-  safelist: 'prose prose-sm m-auto text-left'.split(' '),
+  safelist: ['prose'],
 })

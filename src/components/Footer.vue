@@ -6,8 +6,8 @@ const { t } = useI18n()
   <footer
     flex="~ col lg:row"
     justify-between items-center
-    p="y4 lg:x10"
-    border="t-1 t-gray-200 dark:t-gray-800"
+    p="y-4 " wrapper
+    border="t-1 t-gray-200 dark:t-slate-700"
     text="xs sm:sm gray-400"
   >
     <span

@@ -1,13 +1,38 @@
-@import './animation.css';
 @import './markdown.css';
 
-body {
-  @apply antialiased text-neutral-800 dark:text-neutral-100;
+html {
+  @apply scroll-pt-16 scroll-smooth;
 
-  background-color: #fffef7;
+  ::-webkit-scrollbar {
+    @apply w-3 h-2;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-stone-200 dark:bg-slate-600 rounded-lg;
+  }
+
+  &.dark {
+    ::-webkit-scrollbar-thumb  {
+      @apply bg-slate-600;
+    }
+  }
+}
+
+body {
+  @apply antialiased bg-amber-50;
+  @apply text-neutral-800 dark:text-neutral-100;
+  @apply snap-y snap-proximity;
 
   ::selection {
-    background-color: #ffae9a;
+    @apply bg-orange-300;
   }
 }
 
@@ -15,12 +40,16 @@ img {
   @apply max-w-full max-h-full;
 }
 
+hr {
+  @apply text-gray-200 dark:text-slate-700;
+}
+
 .dark {
   body {
-    background-color: #181c22;
+    @apply bg-slate-800;
 
     ::selection {
-      background-color: #7094bd;
+      @apply bg-orange-900;
     }
   }
 
@@ -46,8 +75,7 @@ img {
     }
 
     &-header-textarea {
-      color: rgba(#eee, 0.8) !important;
-      background-color: #333 !important;
+      @apply: bg-slate-600 hover:bg-slate-600;
     }
 
     &-popup {
@@ -58,16 +86,19 @@ img {
       }
     }
 
+    &-comment-body {
+      @apply: !text-slate-200;
+    }
+
     &-comment-content {
-      background-color: #333 !important;
-      border-radius: 4px;
+      @apply: !bg-slate-600 rounded;
 
       &:hover {
         box-shadow: 0 2px 15px 0 rgba(#999, 0.1) !important;
       }
 
       .gt-comment-username {
-        color: #666;
+        @apply: text-slate-400;
       }
     }
   }

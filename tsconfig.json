@@ -20,6 +20,7 @@
       "vite-plugin-vue-layouts/client"
     ],
     "paths": {
+      "~/posts/*": ["posts/*"],
       "~/*": ["src/*"]
     }
   },

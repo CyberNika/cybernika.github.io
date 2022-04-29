@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { isDark, toggleDark } from '~/composables'
-
+const route = useRoute()
 const { t } = useI18n()
 
 const menus = [
-  { id: 'HOME', title: t('header.nav.home'), link: '/', exact: false },
-  // { id: "BLOG", title: t('header.nav.blog'), link: "/blog" },
-  // { id: 'GALLERY', title: t('header.nav.gallery'), link: '/gallery' },
-  { id: 'ABOUT', title: t('header.nav.about'), link: '/about' },
-  // { id: 'SAY_HI', title: t('header.nav.say-hi'), link: '/say-hi' },
+  { id: 'HOME', title: t('header.nav.home'), link: '/', isActive: () => route.path === '/' },
+  { id: 'BLOG', title: t('header.nav.blog'), link: '/blog', isActive: () => route.path.startsWith('/blog') },
+  // { id: 'GALLERY', title: t('header.nav.gallery'), link: '/gallery', isActive: () => route.path === '/' },
+  { id: 'ABOUT', title: t('header.nav.about'), link: '/about', isActive: () => route.path === '/about' },
+  { id: 'SAY_HI', title: t('header.nav.say-hi'), link: '/say-hi', isActive: () => route.path === '/say-hi' },
 ]
 
 // const toggleLocales = () => {
@@ -20,43 +20,40 @@ const menus = [
 
 <template>
   <header
-    wrapper
+    wrapper z-30 bg-amber-50 dark:bg-slate-800 bg-opacity-98 dark:bg-opacity-98
     flex justify-between items-center
-    backdrop-blur-lg
-    z-30
   >
     <RouterLink
       to="/"
-      font-bold text-lg
+      lt-sm="whitespace-pre-line leading-none"
+      p="x-2 y-0.5"
+      bg-brand rounded-lg
+      font-bold font-mono
+      text-sm text-white italic
+      hover:opacity-80
+      sm:text-md
+      style="word-spacing: -0.3em;"
       :title="t('header.name')"
     >
-      <span inline-block i-carbon-campsite vertical-middle />
-
-      <h3 inline-block ml-1 vertical-middle>
-        {{ t('header.slogan') }}
-      </h3>
+      {{ t('header.slogan') }}
     </RouterLink>
 
-    <nav flex>
-      <ul flex items-center>
+    <nav flex overflow-x-hidden>
+      <ul ml-5 flex overflow-x-auto whitespace-nowrap items-center>
         <li
           v-for="item of menus" :key="item.id"
-          ml-5
+          not-last:mr-5
         >
           <RouterLink
-            v-slot="{ href, navigate, isExactActive }"
-            :to="item.link"
+            v-slot="{ href, navigate }"
             custom
+            :to="item.link"
           >
             <a
-              :href="href"
               hover:opacity-100
               hover:font-bold
-              :class="{
-                'opacity-50': !isExactActive,
-                'opacity-100': isExactActive,
-                'font-bold': isExactActive,
-              }"
+              :href="href"
+              :class="item.isActive() ? ['opacity-100', 'font-bold'] : ['opacity-50']"
               @click="navigate"
             >
               {{ item.title }}
@@ -65,9 +62,9 @@ const menus = [
         </li>
       </ul>
 
-      <ul flex items-center>
+      <ul ml-5 flex items-center>
         <li
-          ml-5
+          not-last:mr-5
           opacity-50 cursor-pointer
           hover:opacity-100 hover:font-bold
           i-carbon-sun dark:i-carbon-moon

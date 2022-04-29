@@ -5,8 +5,64 @@
   --prism-font-family: 'DM Mono', monospace;
 }
 
-.prose img {
-  width: 100%;
+.prose {
+  @apply !max-w-none;
+
+  img:not(.not-prose) {
+    @apply rounded;
+    @apply: opacity-85;
+  }
+
+  hr:not(.not-prose) {
+    @apply: border-t-1 border-t-stone-200;
+    @apply: dark:border-t-1 dark:border-t-slate-700;
+  }
+
+  blockquote:not(.not-prose) {
+    @apply border-l-2 border-l-brand;
+  }
+
+  pre:not(.not-prose) {
+    @apply bg-stone-50 max-h-md;
+    @apply dark:bg-slate-700;
+
+    &::-webkit-scrollbar {
+      @apply 2-4 h-4;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply border-4 border-solid border-stone-50;
+      @apply dark:border-4 dark:border-solid dark:border-slate-700;
+    }
+  }
+
+  h1:not(.not-prose) {
+    @apply mt-6;
+  }
+
+  h2, h3 {
+    &:not(.not-prose) {
+      @apply mt-5;
+    }
+  }
+
+  h4, h5. h6 {
+    &:not(.not-prose) {
+      @apply mt-3;
+    }
+  }
+
+  [id] {
+    &:hover {
+      .header-anchor {
+        @apply inline;
+      }
+    }
+
+    .header-anchor {
+      @apply display-none opacity-50 no-underline;
+    }
+  }
 }
 
 html:not(.dark) .prose {

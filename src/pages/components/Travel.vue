@@ -41,7 +41,7 @@ const activeMapType = ref(travelMapTypes[0].value)
       </div>
     </div>
 
-    <ul text="lg center lg:xl" mt-1>
+    <ul text="lg center lg:xl" mt-2>
       <li
         v-for="item of travelMapTypes"
         :key="item.value"

@@ -3,22 +3,20 @@ import Hello from './components/Hello.vue'
 import Travel from './components/Travel.vue'
 import Skill from './components/Skill.vue'
 import Photo from './components/Photo.vue'
-import Other from './components/Other.vue'
+// import Other from './components/Other.vue'
 </script>
 
 <template>
-  <div class="home" mx-auto max-w-screen-xl font-serif>
-    <Hello />
-    <Travel />
-    <Skill />
-    <Photo />
-    <Other />
-  </div>
+  <Hello content font-serif />
+  <Travel content font-serif />
+  <Skill content font-serif wrapper-y />
+  <Photo content font-serif wrapper-y />
+  <!-- <Other content font-serif wrapper-y /> -->
 </template>
 
 <style>
 .home-section {
-  @apply wrapper relative flex flex-col justify-center;
+  @apply relative flex flex-col justify-center;
 }
 
 .home-section-title {
@@ -35,3 +33,8 @@ import Other from './components/Other.vue'
   @apply block sm:inline;
 }
 </style>
+
+<route lang="yaml">
+meta:
+  layout: home
+</route>

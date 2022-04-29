@@ -1,9 +1,11 @@
 <template>
-  <main class="px-4 py-10 text-center text-gray-700 dark:text-gray-200">
-    <RouterView />
+  <div flex="~ col" min-h-screen>
+    <Header pos="fixed top-0 left-0" h-16 w-full />
+
+    <main wrapper-x flex-1>
+      <RouterView />
+    </main>
+
     <Footer />
-    <div class="mt-5 mx-auto text-center opacity-25 text-sm">
-      [Home Layout]
-    </div>
-  </main>
+  </div>
 </template>
