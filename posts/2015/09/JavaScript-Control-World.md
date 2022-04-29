@@ -278,8 +278,8 @@ JavaScript 固然可以做很多事情，从前端到后端，从桌面到移动
 > JavaScript 统治世界，任重而道远啊！
 
 
-  [1]: ./assets/JavaScript-Control-World/react-native-requirements.png
-  [2]: ./assets/JavaScript-Control-World/console.jpg
-  [3]: ./assets/JavaScript-Control-World/legend-javascript.png
-  [4]: ./assets/JavaScript-Control-World/react.png
-  [5]: ./assets/JavaScript-Control-World/cocos2d-js.png
+  [1]: ../../assets/javascript-control-world/react-native-requirements.png
+  [2]: ../../assets/javascript-control-world/console.jpg
+  [3]: ../../assets/javascript-control-world/legend-javascript.png
+  [4]: ../../assets/javascript-control-world/react.jpg
+  [5]: ../../assets/javascript-control-world/cocos2d-js.png
