@@ -39,12 +39,12 @@ $.ajax({
   type: 'POST',
   url: "api.php/CustomerLogin/login",
   data: {
-    username: 'PuYart',
-    password: 'jianshu',
-    uuid: 'web_jianshu'
+    username: 'Stephen',
+    password: 'javascript',
+    uuid: 'web_javascript'
   },
   success: function (data) {
-      // 登录成功
+    // 登录成功
   }
 });
 ```
@@ -209,8 +209,8 @@ function Person(name, gender, age) {
   return obj;
 }
 
-var puya = new Person('PuYart', 'male', '21');
-puya.tellAge();
+var stephen = new Person('Stephen', 'male', '21');
+stephen.tellAge();
 ```
 
 ``` javascript
@@ -224,8 +224,8 @@ function Person(name, gender, age) {
   };
 }
 
-var puya = new Person('PuYart', 'male', '21');
-puya.tellAge();
+var stephen = new Person('Stephen', 'male', '21');
+stephen.tellAge();
 ```
 
 ``` javascript
@@ -237,11 +237,11 @@ function Person(name, gender, age) {
 }
 
 Person.prototype.tellAge = function () {
-    console.log(this.age);
+  console.log(this.age);
 };
 
-var puya = new Person('PuYart', 'male', '21');
-puya.tellAge();
+var stephen = new Person('Stephen', 'male', '21');
+stephen.tellAge();
 ```
 
 这里举出了常用的三种构造对象的方法，你也会感觉到恶心得要死吧。为了改善 JavaScript 语言本身的不足，微软在 2012 年推出了 [TypeScript](http://www.typescriptlang.org/) 语言，TypeScript 是 JavaScript 的超集，支持强类型和 OOP，最终编译为 JavaScript。当然了 [CoffeeScript](http://coffee-script.org/) 也是一种解决方案。
@@ -261,8 +261,8 @@ class Person {
   }
 }
 
-var puya = new Person('PuYart', 'male', '21');
-puya.tellAge();
+var stephen = new Person('Stephen', 'male', '21');
+stephen.tellAge();
 ```
 
 虽然 ES6 带来了很多美妙的特性，让 JavaScript 也可以像其他语言那样优雅地写出健壮的代码，但是 ES5 还会独占市场很久，各浏览器厂商跟进也需要一段时间。然而我们有理由相信，在不久的将来，JavaScript 的另一片美好的天空定会到来。毕竟 JavaScript 是一门年轻但是充满活力、不断进化的语言。
@@ -278,8 +278,8 @@ JavaScript 固然可以做很多事情，从前端到后端，从桌面到移动
 > JavaScript 统治世界，任重而道远啊！
 
 
-  [1]: http://segmentfault.com/img/bVpX99
-  [2]: http://segmentfault.com/img/bVpYad
-  [3]: http://segmentfault.com/img/bVpYaf
-  [4]: http://segmentfault.com/img/bVpYax
-  [5]: http://segmentfault.com/img/bVpYaE
+  [1]: ./assets/JavaScript-Control-World/react-native-requirements.png
+  [2]: ./assets/JavaScript-Control-World/console.jpg
+  [3]: ./assets/JavaScript-Control-World/legend-javascript.png
+  [4]: ./assets/JavaScript-Control-World/react.png
+  [5]: ./assets/JavaScript-Control-World/cocos2d-js.png

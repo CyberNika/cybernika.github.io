@@ -16,7 +16,7 @@ const { t } = useI18n()
     <div
       mb-3
       sm="w-xs float-left mr-6 mb-0"
-      md="w-1/2 float-left"
+      md="w-2/5 float-left"
       xl="float-none"
     >
       <img src="/me.jpg" rounded>

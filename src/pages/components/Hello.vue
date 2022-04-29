@@ -40,10 +40,10 @@ const goNextPage = (evt: MouseEvent) => {
         </RouterLink>
         <span>，或者看看我的</span>
         <a line-through cursor-not-allowed opacity-80>作品</a>
-        <span>，或是简单打个</span>
+        <!-- <span>，或是简单打个</span>
         <RouterLink class="anchor" to="/say-hi">
           <span>招呼</span>
-        </RouterLink>
+        </RouterLink> -->
         😉
       </p>
     </div>
