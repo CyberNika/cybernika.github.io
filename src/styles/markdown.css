@@ -23,17 +23,23 @@
   }
 
   pre:not(.not-prose) {
-    @apply bg-stone-50 max-h-md;
+    @apply bg-opacity-50 bg-stone-200 max-h-md;
     @apply dark:bg-slate-700;
 
     &::-webkit-scrollbar {
-      @apply 2-4 h-4;
+      @apply w-2 h-2;
     }
 
     &::-webkit-scrollbar-thumb {
-      @apply border-4 border-solid border-stone-50;
-      @apply dark:border-4 dark:border-solid dark:border-slate-700;
+      /* @apply border-4 border-solid border-stone-200/50;
+      @apply dark:border-4 dark:border-solid dark:border-slate-700; */
     }
+  }
+
+  :not(pre) > code:not(.not-prose) {
+    @apply before:hidden after:hidden;
+    @apply bg-opacity-50 bg-stone-200 px-1 py-0.5;
+    @apply dark:bg-slate-700 rounded;
   }
 
   h1:not(.not-prose) {

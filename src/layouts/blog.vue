@@ -75,10 +75,10 @@ const displayPosts = postSortedKeys.slice(0, 5).map(item => posts[item as PostKe
         <div
           w-full mt-5 font-serif
           lg:w-xs lg:ml-15 lg:mt-0
-          lg:opacity-70
+          lg:opacity-75 lg:hover:opacity-100
         >
           <div lg:fixed>
-            <section v-if="post.toc.length">
+            <section v-if="post.toc.length" mb-8>
               <h4 text-lg font-semibold>
                 目录
               </h4>
@@ -86,7 +86,7 @@ const displayPosts = postSortedKeys.slice(0, 5).map(item => posts[item as PostKe
               <Toc mt-1 max-h-90 overflow-y-auto :items="post.toc" content />
             </section>
 
-            <section v-if="displayPosts.length" mt-5>
+            <section v-if="displayPosts.length">
               <h4 text-lg font-semibold>
                 最新文章
               </h4>

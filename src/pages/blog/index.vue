@@ -19,7 +19,7 @@ const { t, d } = useI18n()
   <ul animate-fade-in animate-count-1 animate-duration-1s content font-serif>
     <li v-for="item of displayPosts" :key="item.key" mt-6>
       <h2
-        text-3xl font-bold
+        text-2xl font-bold
       >
         <RouterLink
           pb-1 border-b-3 border-transparent

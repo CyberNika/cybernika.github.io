@@ -1,5 +1,6 @@
 <script setup lang="ts">
 interface TocNode {
+  level: number
   title: string
   anchor: string
   children?: TocNode[]

@@ -129,28 +129,28 @@ const viteBlogPlugin = (): Plugin => {
   const generateManifest = () => {
     const postSortedKeys = Object.values(posts).sort((a, b) => {
       if (a.date && b.date && a.date !== b.date)
-        return a.date > b.date ? 1 : -1
+        return a.date > b.date ? -1 : 1
 
       if (a.date && !b.date) {
         if (!b.updated)
-          return 1
+          return -1
 
-        return a.date > b.updated ? 1 : -1
+        return a.date > b.updated ? -1 : 1
       }
 
       if (!a.date && b.date) {
         if (!a.updated)
-          return -1
+          return 1
 
-        return a.updated > b.date ? 1 : -1
+        return a.updated > b.date ? -1 : 1
       }
 
       if (!b.updated)
-        return 1
-      if (!a.updated)
         return -1
+      if (!a.updated)
+        return 1
 
-      return a.updated > b.updated ? 1 : -1
+      return a.updated > b.updated ? -1 : 1
     }).map(item => item.key)
 
     return fs.writeFile(
