@@ -60,7 +60,7 @@ const photos = [
         rounded="md lg:lg" overflow-hidden
         after:absolute after:left-0 after:top-0
         after:content-none after:w-full after:h-full
-        dark:after:shadow-none dark:after:bg-gray-800 dark:after:bg-opacity-30
+        dark:after:shadow-none dark:after:bg-gray-600 dark:after:bg-opacity-30
       >
         <img
           :src="item.thumb"

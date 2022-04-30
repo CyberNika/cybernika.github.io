@@ -2,7 +2,8 @@ import path from 'path'
 import fs from 'fs/promises'
 import type { Plugin } from 'vite'
 import matter from 'gray-matter'
-import string from 'string'
+
+import slugify from './slugify'
 
 interface TocNode {
   level: number
@@ -30,7 +31,7 @@ const generateTOC = (content: string) => {
     const toc: TocNode = {
       level: match[1].length,
       title: match[2],
-      anchor: `#${string(match[2]).slugify().toString()}`,
+      anchor: `#${slugify(match[2])}`,
     }
 
     while (nodes.length) {

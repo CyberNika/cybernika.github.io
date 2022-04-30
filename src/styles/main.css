@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  @apply antialiased bg-amber-50;
+  @apply antialiased bg-light-soft;
   @apply text-neutral-800 dark:text-neutral-100;
   @apply snap-y snap-proximity;
 

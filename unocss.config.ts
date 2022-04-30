@@ -25,6 +25,9 @@ export default defineConfig({
     colors: {
       // brand: '#be123c',
       brand: '#475569',
+      light: {
+        soft: '#fffef7',
+      },
       divider: {
         light: '#475569',
         dark: '#e2e8f0',

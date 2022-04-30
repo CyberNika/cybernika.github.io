@@ -23,22 +23,22 @@
   }
 
   pre:not(.not-prose) {
-    @apply bg-opacity-50 bg-stone-200 max-h-md;
+    @apply bg-stone-50 max-h-md;
     @apply dark:bg-slate-700;
 
     &::-webkit-scrollbar {
-      @apply w-2 h-2;
+      @apply w-4 h-4;
     }
 
     &::-webkit-scrollbar-thumb {
-      /* @apply border-4 border-solid border-stone-200/50;
-      @apply dark:border-4 dark:border-solid dark:border-slate-700; */
+      @apply border-4 border-solid border-stone-50;
+      @apply dark:border-4 dark:border-solid dark:border-slate-700;
     }
   }
 
   :not(pre) > code:not(.not-prose) {
     @apply before:hidden after:hidden;
-    @apply bg-opacity-50 bg-stone-200 px-1 py-0.5;
+    @apply bg-stone-50 px-1 py-0.5;
     @apply dark:bg-slate-700 rounded;
   }
 

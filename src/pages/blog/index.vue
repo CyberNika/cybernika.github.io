@@ -30,7 +30,7 @@ const { t, d } = useI18n()
         </RouterLink>
       </h2>
 
-      <p truncate mt-3 flex items-center font-mono font-semibold>
+      <p whitespace-nowrap overflow-x-auto mt-3 flex items-center font-mono font-semibold>
         <ul
           v-if="'categories' in item"
           flex items-center

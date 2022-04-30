@@ -12,9 +12,9 @@ import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Anchor from 'markdown-it-anchor'
-import string from 'string'
 import Unocss from 'unocss/vite'
 
+import slugify from './scripts/slugify'
 import viteBlogPlugin from './scripts/vite-plugin-blog'
 
 export default defineConfig({
@@ -97,7 +97,7 @@ export default defineConfig({
           permalink: true,
           permalinkSymbol: '#',
           // permalinkBefore: true,
-          slugify: (s: string) => string(s).slugify().toString(),
+          slugify: (s: string) => slugify(s),
         })
         md.use(LinkAttributes, {
           matcher: (link: string) => /^https?:\/\//.test(link),

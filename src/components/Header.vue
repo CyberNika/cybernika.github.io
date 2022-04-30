@@ -20,7 +20,7 @@ const menus = [
 
 <template>
   <header
-    wrapper z-30 bg-amber-50 dark:bg-slate-800 bg-opacity-98 dark:bg-opacity-98
+    wrapper z-30 bg-light-soft dark:bg-slate-800 bg-opacity-98 dark:bg-opacity-98
     flex justify-between items-center
   >
     <RouterLink

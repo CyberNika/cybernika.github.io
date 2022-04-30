@@ -25,7 +25,7 @@ const displayPosts = postSortedKeys.slice(0, 5).map(item => posts[item as PostKe
             {{ post.title }}
           </h1>
 
-          <p truncate flex items-center font-mono font-semibold>
+          <p whitespace-nowrap overflow-x-auto flex items-center font-mono font-semibold>
             <ul
               v-if="post.categories.length"
               flex items-center

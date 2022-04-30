@@ -11,7 +11,7 @@ const { t } = useI18n()
     animate-fade-in animate-count-1 animate-duration-1s
     content rounded-lg xl:flex
     p="x-5 y-6 lg:x-10 lg:y-8 xl:x-12 xl:y-10"
-    bg="amber-100 opacity-15 dark:yellow-50 dark:opacity-10"
+    bg="amber-50 dark:slate-700"
   >
     <div
       mb-3
