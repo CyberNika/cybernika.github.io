@@ -20,6 +20,8 @@ export default defineConfig({
     ['wrapper', 'wrapper-x wrapper-y'],
     ['content', 'm-x-auto max-w-screen-lg'],
     ['page-title', 'text-4xl font-bold font-serif mb-6'],
+    ['link', 'underline underline-offset-5 font-bold decoration-1 decoration-divider-light dark:decoration-divider-dark hover:opacity-90'],
+    ['through', 'line-through cursor-not-allowed opacity-80'],
   ],
   theme: {
     colors: {

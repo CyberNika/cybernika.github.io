@@ -33,16 +33,16 @@ const { t } = useI18n()
         我本科毕业于西安电子科技大学，就读智能科学与技术专业。大三暑期去到上海，在饿了么实习数月。毕业后转向北京，加入字节跳动，而后在教育、电商、内容等多个行业头部公司工作。
       </p>
       <p mt-4>
-        我曾是一名前端开发工程师，公司的快速发展，让我有机会做了全栈开发，也有幸成为了 Team Leader。但人总是想要改变和突破，于是我鼓足勇气选择了离开，去试着做些更有趣、更有挑战的事情。
+        我是一名软件开发工程师，公司的快速发展，让我有机会做了全栈开发，也有幸成为了 Team Leader。但人总是想要改变和突破，于是我鼓足勇气选择了离开，去试着做些更有趣、更有挑战的事情。
       </p>
       <p mt-4>
         <span>你可以给我</span>
-        <RouterLink to="/#say-hi" class-name="bold">
-          留言
-        </RouterLink>
-        <span>，也可以通过电子邮箱</span>
-        <a href="mailto:superstack.pro@gmail.com"> superstack.pro@gmail.com </a>
-        <span>找到我。希望我们有机会可以聊一聊。</span>
+        <!-- <RouterLink link to="/say-hi"> -->
+          <span through>留言</span>
+        <!-- </RouterLink> -->
+        <span>，也可以通过电子邮箱 </span>
+        <a link href="mailto:superstack.pro@gmail.com">superstack.pro@gmail.com</a>
+        <span> 找到我。希望我们有机会可以聊一聊。</span>
       </p>
     </div>
   </div>

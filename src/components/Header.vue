@@ -5,7 +5,7 @@ const { t } = useI18n()
 
 const menus = [
   { id: 'HOME', title: t('header.nav.home'), link: '/', isActive: () => route.path === '/' },
-  { id: 'BLOG', title: t('header.nav.blog'), link: '/blog', isActive: () => route.path.startsWith('/blog') },
+  // { id: 'BLOG', title: t('header.nav.blog'), link: '/blog', isActive: () => route.path.startsWith('/blog') },
   // { id: 'GALLERY', title: t('header.nav.gallery'), link: '/gallery', isActive: () => route.path === '/' },
   { id: 'ABOUT', title: t('header.nav.about'), link: '/about', isActive: () => route.path === '/about' },
   // { id: 'SAY_HI', title: t('header.nav.say-hi'), link: '/say-hi', isActive: () => route.path === '/say-hi' },

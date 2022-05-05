@@ -33,15 +33,16 @@ const goNextPage = (evt: MouseEvent) => {
 
       <p mt-3 text-xl>
         <span>继续往下，了解更多我的</span>
-        <a class="anchor" href="" @click="goNextPage">故事</a>
+        <a link href="" @click="goNextPage">故事</a>
         <span>。也可以访问我的</span>
-        <RouterLink class="anchor" to="/blog">
+        <a through>博客</a>
+        <!-- <RouterLink link to="/blog">
           <span>博客</span>
-        </RouterLink>
+        </RouterLink> -->
         <span>，或者看看我的</span>
-        <a line-through cursor-not-allowed opacity-80>作品</a>
+        <a through>作品</a>
         <!-- <span>，或是简单打个</span>
-        <RouterLink class="anchor" to="/say-hi">
+        <RouterLink link to="/say-hi">
           <span>招呼</span>
         </RouterLink> -->
         😉
@@ -65,12 +66,3 @@ const goNextPage = (evt: MouseEvent) => {
     </div>
   </div>
 </template>
-
-<style scoped>
-.anchor {
-  @apply underline underline-offset-5 font-bold;
-  @apply decoration-1 decoration-divider-light;
-  @apply dark:decoration-divider-dark;
-  @apply hover:opacity-90;
-}
-</style>

@@ -140,6 +140,11 @@ const TRAVEL_FOOTPRINT = {
     geo: [114.298572, 30.584355],
   },
   // 湖南
+  长沙: {
+    country: 'China',
+    value: 1,
+    geo: [112.948919, 28.234381],
+  },
 
   // 华南区：广东、广西、海南
   // 广东
@@ -150,7 +155,7 @@ const TRAVEL_FOOTPRINT = {
   },
   深圳: {
     country: 'China',
-    value: 2,
+    value: 3,
     geo: [114.085947, 22.547],
   },
   珠海: {
