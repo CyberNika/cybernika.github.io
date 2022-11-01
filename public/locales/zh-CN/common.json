@@ -1,0 +1,36 @@
+{
+  "header": {
+    "name": "SuperStack",
+    "slogan": "SUPER\nSTACK",
+    "nav": {
+      "home": "首页",
+      "blog": "博客",
+      "gallery": "作品",
+      "about": "关于",
+      "say-hi": "留言"
+    },
+    "button": {
+      "toggle-mode": "切换深/浅色模式",
+      "toggle-langs": "切换语言"
+    }
+  },
+  "home": {
+    "hello": {
+      "hi-i-am-stephen": "嗨，我是 Stephen",
+      "nice-to-meet-you-here": {
+        "1": "很开心在这里",
+        "2": "遇见你 🎈"
+      }
+    }
+  },
+  "about": {
+    "title": "关于我"
+  },
+  "blog": {
+    "title": "博客"
+  },
+  "say-hi": {
+    "title": "给我留言"
+  },
+  "not-found": "未找到页面"
+}

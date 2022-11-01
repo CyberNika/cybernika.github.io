@@ -1,0 +1,36 @@
+{
+  "header": {
+    "name": "SuperStack",
+    "slogan": "SUPER\nSTACK",
+    "nav": {
+      "home": "Home",
+      "blog": "Blog",
+      "gallery": "Gallery",
+      "about": "About",
+      "say-hi": "Say hi"
+    },
+    "button": {
+      "toggle-mode": "Toggle dark/light mode",
+      "toggle-langs": "Change languages"
+    }
+  },
+  "home": {
+    "hello": {
+      "hi-i-am-stephen": "Hi, I'm Stephen",
+      "nice-to-meet-you-here": {
+        "1": "Delighted to meet ",
+        "2": "you here 🎈"
+      }
+    }
+  },
+  "about": {
+    "title": "About me"
+  },
+  "blog": {
+    "title": "Blog"
+  },
+  "say-hi": {
+    "title": "Say Hi"
+  },
+  "not-found": "Not found"
+}

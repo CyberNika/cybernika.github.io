@@ -2,12 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer utilities {
+  .wrapper-l {
+    @apply pl-6 sm:pl-10 md:pl-10 xl:pl-20 2xl:pl-40;
   }
-  body {
-    color: white;
-    background: black;
+
+  .wrapper-r {
+    @apply pr-6 sm:pr-10 md:pr-10 xl:pr-20 2xl:pr-40;
   }
-} */
+
+  .wrapper-x {
+    @apply wrapper-l wrapper-r;
+  }
+
+  .wrapper-t {
+    @apply pt-4 sm:pt-5 xl:pt-6;
+  }
+
+  .wrapper-b {
+    @apply pb-4 sm:pb-5 xl:pb-6;
+  }
+
+  .wrapper-y {
+    @apply wrapper-t wrapper-b;
+  }
+
+  .wrapper {
+    @apply wrapper-x wrapper-y;
+  }
+
+  .content {
+    @apply mx-auto max-w-screen-lg;
+  }
+
+  .page-title {
+    @apply text-4xl font-bold font-serif mb-6;
+  }
+
+  .link {
+    @apply underline underline-offset-4 font-bold decoration-divider-light dark:decoration-divider-dark hover:opacity-90;
+   }
+
+  .through {
+    @apply line-through cursor-not-allowed opacity-80;
+  }
+}

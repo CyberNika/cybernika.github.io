@@ -5,7 +5,9 @@ import matter from 'gray-matter'
 interface PostItem {
   id: string;
   title?: string;
-  date?: string;
+  date?: Date | string;
+  tags?: string[];
+  categories?: string[];
   [key: string]: any;
 }
 
