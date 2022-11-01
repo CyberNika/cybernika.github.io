@@ -6,6 +6,7 @@ import { appWithTranslation } from "next-i18next";
 import { NormalLayout } from "@/layouts";
 
 import "@/styles/globals.css";
+import "@/styles/home.css";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;

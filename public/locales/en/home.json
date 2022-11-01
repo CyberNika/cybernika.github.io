@@ -1,0 +1,21 @@
+{
+  "hello": {
+    "hi-i-am-stephen": "Hi, I'm Stephen",
+    "nice-to-meet-you-here": {
+      "1": "Delighted to meet ",
+      "2": "you here 🎈"
+    },
+    "who-am-i": "I am a slash youth, living in Beijing, and making a living from software development. Dreams of becoming a salted fish, loves travel and photography, and has great interests in writing and design. I'm working on a better life, and I hope one day I can take a dog with her and see the world.",
+    "continue-to-next": {
+      "story-leading": "Read on for more of my ",
+      "story": "story",
+      "blog-leading": ". You can also visit my ",
+      "blog": "blog",
+      "works-leading": ", or see my ",
+      "works": "work",
+      "say-hi-leading": ", or simply ",
+      "say-hi": "say hi"
+    },
+    "view-more-story": "Learn more about my story"
+  }
+}

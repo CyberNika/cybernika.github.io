@@ -1,0 +1,21 @@
+@tailwind utilities;
+
+@layer utilities {
+  .home-section {
+    @apply relative flex flex-col justify-center;
+  }
+
+  .home-section-title {
+    @apply text-2xl leading-snug;
+    @apply lg:text-3xl;
+    @apply xl:text-4xl;
+  }
+
+  .home-section-title + .home-section-title {
+    @apply mt-xl;
+  }
+
+  .home-section-title-magic {
+    @apply block sm:inline;
+  }
+}
