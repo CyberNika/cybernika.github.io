@@ -15,7 +15,7 @@ const HomeHello = () => {
   };
 
   return (
-    <div className="home-section h-screen">
+    <div className="home-section h-screen content font-serif">
       <div className="content animate-fade-in animate-count-1 animate-duration-1s">
         <h1 className="font-bold leading-tight text-4xl lg:text-5xl">
           <p>{t("hello.hi-i-am-stephen")}</p>
@@ -39,7 +39,7 @@ const HomeHello = () => {
             <span>{t("hello.continue-to-next.blog")}</span>
           </Link>
           <span>{t("hello.continue-to-next.works-leading")}</span>
-          <a className="through">{t("hello.continue-to-next.works-leading")}</a>
+          <a className="through">{t("hello.continue-to-next.works")}</a>
           <span>{t("hello.continue-to-next.say-hi-leading")}</span>
           <Link className="link" href="/say-hi">
             <span>{t("hello.continue-to-next.say-hi")}</span>

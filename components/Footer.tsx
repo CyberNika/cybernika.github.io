@@ -14,7 +14,7 @@ const Footer = () => {
       </span>
 
       <span className="font-mono">
-        Created with ❤ by
+        <span>Created with ❤ by </span>
         <a href="https://github.com/SuperStackPro" target="__blank">
           Stephen
         </a>

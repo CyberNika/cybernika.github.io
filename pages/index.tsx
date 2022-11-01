@@ -1,9 +1,11 @@
+import { ReactElement } from "react";
 import type { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { Hello, Travel, Skill, Photo } from "@/components/home";
+import { HomeLayout } from "@/layouts";
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +17,7 @@ const Home: NextPage = () => {
       </Head>
 
       <div>
-        <Hello className="content font-serif" />
+        <Hello />
         <Travel className="content font-serif" />
         <Skill className="content font-serif wrapper-y" />
         <Photo className="content font-serif wrapper-y" />
@@ -23,6 +25,8 @@ const Home: NextPage = () => {
     </>
   );
 };
+
+Home.getLayout = (page: ReactElement) => <HomeLayout>{page}</HomeLayout>;
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {

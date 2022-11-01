@@ -1,8 +1,15 @@
+import { CSSProperties } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import cn from "classnames";
 
-const Header = () => {
+interface HeaderProps {
+  className?: string;
+  style?: CSSProperties;
+}
+
+const Header = ({ className, style }: HeaderProps) => {
   const router = useRouter();
   const { t } = useTranslation("common");
 
@@ -25,18 +32,25 @@ const Header = () => {
   ] as const;
 
   return (
-    <header className="wrapper z-30 bg-light-soft dark:bg-slate-800 bg-opacity-98 dark:bg-opacity-98 flex justify-between items-center">
+    <header
+      className={cn(
+        "wrapper flex justify-between items-center",
+        "z-50 bg-light-soft bg-opacity-98",
+        "dark:bg-slate-800 dark:bg-opacity-98",
+        className,
+      )}
+      style={style}
+    >
       <Link
         href="/"
-        // lt-sm="whitespace-pre-line leading-none"
-        // p="x-2 y-0.5"
-        // bg-brand rounded-lg
-        // font-bold font-mono
-        // text-sm text-white italic
-        // hover:opacity-80
-        // sm:text-md
-        // style="word-spacing: -0.3em;"
-        title="t('header.name')"
+        className={cn(
+          "px-2 py-0.5",
+          "bg-brand rounded-lg",
+          "font-bold font-mono text-sm text-white italic sm:text-md",
+          "hover:opacity-80",
+          "max-sm:whitespace-pre-line max-sm:leading-none",
+        )}
+        title={t("header.name")}
       >
         {t("header.slogan")}
       </Link>
@@ -44,7 +58,7 @@ const Header = () => {
       <nav className="flex overflow-x-hidden">
         <ul className="ml-5 flex overflow-x-auto whitespace-nowrap items-center">
           {menus.map((item) => (
-            <li key={item.id} className="not-last:mr-5">
+            <li key={item.id} className="mr-5 last:mr-0">
               <Link href={item.link}>{item.title}</Link>
             </li>
           ))}
@@ -52,7 +66,7 @@ const Header = () => {
 
         <ul className="ml-5 flex items-center">
           <li
-            className="not-last:mr-5 opacity-50 cursor-pointer hover:opacity-100 hover:font-bold i-carbon-sun dark:i-carbon-moon"
+            className="last:mr-5 last:mr-0 opacity-50 cursor-pointer hover:opacity-100 hover:font-bold i-carbon-sun dark:i-carbon-moon"
             title={t("header.button.toggle-mode")}
           />
         </ul>
