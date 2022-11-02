@@ -12,7 +12,7 @@
   }
 
   .home-section-title + .home-section-title {
-    @apply mt-xl;
+    @apply mt-10;
   }
 
   .home-section-title-magic {

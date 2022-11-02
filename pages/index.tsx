@@ -16,11 +16,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
+      <div className="font-serif">
         <Hello />
-        <Travel className="content font-serif" />
-        <Skill className="content font-serif wrapper-y" />
-        <Photo className="content font-serif wrapper-y" />
+        <Travel />
+        <Skill className="wrapper-y" />
+        <Photo className="wrapper-y" />
       </div>
     </>
   );

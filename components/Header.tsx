@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import cn from "classnames";
+import { SunOne } from "@icon-park/react";
 
 interface HeaderProps {
   className?: string;
@@ -58,7 +59,10 @@ const Header = ({ className, style }: HeaderProps) => {
       <nav className="flex overflow-x-hidden">
         <ul className="ml-5 flex overflow-x-auto whitespace-nowrap items-center">
           {menus.map((item) => (
-            <li key={item.id} className="mr-5 last:mr-0">
+            <li
+              key={item.id}
+              className="mr-5 last:mr-0 opacity-50 hover:opacity-100 hover:font-bold"
+            >
               <Link href={item.link}>{item.title}</Link>
             </li>
           ))}
@@ -66,9 +70,11 @@ const Header = ({ className, style }: HeaderProps) => {
 
         <ul className="ml-5 flex items-center">
           <li
-            className="last:mr-5 last:mr-0 opacity-50 cursor-pointer hover:opacity-100 hover:font-bold i-carbon-sun dark:i-carbon-moon"
+            className="last:mr-5 last:mr-0 opacity-50 cursor-pointer hover:opacity-100 hover:font-bold"
             title={t("header.button.toggle-mode")}
-          />
+          >
+            <SunOne theme="outline" size="20" />
+          </li>
         </ul>
       </nav>
     </header>
