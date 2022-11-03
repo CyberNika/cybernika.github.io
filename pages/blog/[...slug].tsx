@@ -3,15 +3,23 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 
+import { Article } from "@/components";
 import { getPost, getPosts } from "@/utils/post";
+import { markdownToHtml } from "@/utils/markdown";
 
 interface BlogArticleProps {
   id: string;
   slug: string[];
+  content: string;
   postData: ReturnType<typeof getPost>;
 }
 
-const BlogArticle: NextPage<BlogArticleProps> = ({ id, slug, postData }) => {
+const BlogArticle: NextPage<BlogArticleProps> = ({
+  id,
+  slug,
+  content,
+  postData,
+}) => {
   const router = useRouter();
 
   return (
@@ -19,6 +27,7 @@ const BlogArticle: NextPage<BlogArticleProps> = ({ id, slug, postData }) => {
       Blog slug {slug.join()}
       Blog id {id}
       Blog title {postData.title}
+      <Article content={content} />
     </div>
   );
 };
@@ -42,11 +51,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const id = Array.isArray(slug) ? slug.join("/") : slug;
   const postData = getPost(id);
+  const content = await markdownToHtml(postData.content);
 
   return {
     props: {
       id,
       slug,
+      content,
       postData: postData,
     },
   };

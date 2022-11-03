@@ -27,39 +27,35 @@ const HomeTravel = () => {
 
       <div className="mt-6 overflow-hidden whitespace-nowrap h-3/5">
         <TravelChinaMap
-          className="h-full"
-          style={
+          className={cn(
+            "inline-block h-full w-full transition-all duration-500",
             travelMapType === "WORLD"
-              ? {
-                  opacity: 0,
-                  transform: `translateX(-100%)`,
-                }
-              : undefined
-          }
+              ? "opacity-0 -translate-x-full"
+              : "opacity-1 translate-x-0",
+          )}
         />
         <TravelWorldMap
-          className="h-full"
-          // style={
-          //   travelMapType === "WORLD"
-          //     ? {
-          //         opacity: 0,
-          //         transform: `translateX(-100%)`,
-          //       }
-          //     : undefined
-          // }
+          className={cn(
+            "inline-block h-full w-full transition-all duration-500",
+            travelMapType === "WORLD"
+              ? "opacity-1  -translate-x-full"
+              : "opacity-0 translate-x-0",
+          )}
         />
       </div>
 
       <ul className="mt-2 text-lg text-center lg:text-xl">
         {TRAVEL_MAP_TYPES.map((item) => (
-          <li key={item.value}>
+          <li
+            key={item.value}
+            className={cn(
+              item.value === travelMapType ? "opacity-80" : "opacity-20",
+              "p-1 mx-2 inline-block leading-1 cursor-pointer",
+              "hover:opacity-80",
+            )}
+          >
             <item.icon
               title={item.title}
-              className={cn(
-                item.value === travelMapType ? "opacity-80" : "opacity-20",
-                "p-1 mx-2 inline-block leading-1 cursor-pointer",
-                "hover:opacity-80",
-              )}
               onClick={() => {
                 setTravelMapType(item.value);
               }}

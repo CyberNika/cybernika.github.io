@@ -4,12 +4,15 @@ import { GraphChart } from "echarts/charts";
 import {} from "echarts/components";
 
 import config from "@/config";
+import echarts from "@/utils/chart";
 
 use([CanvasRenderer, GraphChart]);
 
 const SKILLS = config.data.skillGraph.skills;
 
-export const initSkillGraph = () => {
+export const renderSkillGraph = (container: HTMLElement) => {
+  const chart = echarts.init(container);
+
   const data = [];
   const links = [];
   const categories = [];
@@ -45,7 +48,7 @@ export const initSkillGraph = () => {
     links.push(link);
   }
 
-  const option = reactive({
+  const option = {
     series: [
       {
         name: "技术关键词",
@@ -62,7 +65,9 @@ export const initSkillGraph = () => {
         },
       },
     ],
-  });
+  };
 
-  return option;
+  chart.setOption(option);
+
+  return chart;
 };

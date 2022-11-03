@@ -19,8 +19,8 @@ const Home: NextPage = () => {
       <div className="font-serif">
         <Hello />
         <Travel />
-        <Skill className="wrapper-y" />
-        <Photo className="wrapper-y" />
+        <Skill />
+        <Photo />
       </div>
     </>
   );

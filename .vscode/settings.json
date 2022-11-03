@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "echarts"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,

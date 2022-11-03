@@ -21,7 +21,12 @@ const Header = ({ className, style }: HeaderProps) => {
       link: "/",
       isActive: () => router.pathname === "/",
     },
-    // { id: 'BLOG', title: t('header.nav.blog'), link: '/blog', isActive: () => router.pathname.startsWith('/blog') },
+    {
+      id: "BLOG",
+      title: t("header.nav.blog"),
+      link: "/blog",
+      isActive: () => router.pathname.startsWith("/blog"),
+    },
     // { id: 'GALLERY', title: t('header.nav.gallery'), link: '/gallery', isActive: () => router.pathname === '/' },
     {
       id: "ABOUT",
@@ -56,7 +61,7 @@ const Header = ({ className, style }: HeaderProps) => {
         {t("header.slogan")}
       </Link>
 
-      <nav className="flex overflow-x-hidden">
+      <nav className="flex overflow-hidden">
         <ul className="ml-5 flex overflow-x-auto whitespace-nowrap items-center">
           {menus.map((item) => (
             <li

@@ -1,7 +1,6 @@
 import { MouseEvent } from "react";
-
 import Link from "next/link";
-
+import { DoubleDown } from "@icon-park/react";
 import { useTranslation } from "next-i18next";
 
 const HomeHello = () => {
@@ -49,11 +48,11 @@ const HomeHello = () => {
       </div>
 
       <div
-        title="了解更多我的故事"
-        className="absolute bottom-20 left-2/4 text-lg lg:text-xl px-5 translate-x--1/2 cursor-pointer text-gray-500"
+        title={t("hello.learn-more")}
+        className="absolute bottom-20 left-2/4 animate-bounce text-lg lg:text-xl px-5 translate-x--1/2 cursor-pointer text-gray-500"
         onClick={goNextPage}
       >
-        <span className="i-carbon-chevron-down animate-bounce" />
+        <DoubleDown theme="outline" size="24" fill="#333" strokeWidth={2} />
       </div>
     </div>
   );
