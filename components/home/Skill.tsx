@@ -1,4 +1,4 @@
-import cn from "classnames";
+import classNames from "classnames";
 import dynamic from "next/dynamic";
 
 const SkillGraph = dynamic(() => import("./SkillGraph"), {
@@ -25,7 +25,7 @@ const HomeSkill = () => {
       </h3>
 
       <div className="mt-6 overflow-hidden">
-        <SkillGraph className={cn("w-170 h-80", "max-md:w-full max-md:h-30")} />
+        <SkillGraph className={classNames("w-170 h-80", "max-md:w-full max-md:h-30")} />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import { CSSProperties, useEffect, useRef } from "react";
-import cn from "classnames";
+import classNames from "classnames";
 
 import { renderWorldTravelMap } from "./utils/travel";
 
@@ -25,7 +25,7 @@ const WorldTravelMap = ({ className, style }: WorldTravelMapProps) => {
     };
   }, []);
 
-  return <div ref={mapChartRef} className={cn(className)} style={style} />;
+  return <div ref={mapChartRef} className={classNames(className)} style={style} />;
 };
 
 export default WorldTravelMap;

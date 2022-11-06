@@ -1,5 +1,5 @@
 import { CSSProperties, useEffect, useRef } from "react";
-import cn from "classnames";
+import classNames from "classnames";
 
 import { renderSkillGraph } from "./utils/skill";
 
@@ -25,7 +25,7 @@ const ChinaTravelMap = ({ className, style }: ChinaTravelMapProps) => {
     };
   }, []);
 
-  return <div ref={skillGraphRef} className={cn(className)} style={style} />;
+  return <div ref={skillGraphRef} className={classNames(className)} style={style} />;
 };
 
 export default ChinaTravelMap;

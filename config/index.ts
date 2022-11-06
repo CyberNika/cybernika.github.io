@@ -1,3 +1,4 @@
+import gallery from "./gallery";
 import skillGraph from "./skill-graph";
 import travelMap from "./travel-map";
 
@@ -8,6 +9,7 @@ const config = {
     gallery: ["posts/gallery"],
   },
   data: {
+    gallery,
     skillGraph,
     travelMap,
   },

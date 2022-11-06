@@ -2,7 +2,7 @@ import { CSSProperties } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
-import cn from "classnames";
+import classNames from "classnames";
 import { SunOne } from "@icon-park/react";
 
 interface HeaderProps {
@@ -39,7 +39,7 @@ const Header = ({ className, style }: HeaderProps) => {
 
   return (
     <header
-      className={cn(
+      className={classNames(
         "wrapper flex justify-between items-center",
         "z-50 bg-light-soft bg-opacity-98",
         "dark:bg-slate-800 dark:bg-opacity-98",
@@ -49,7 +49,7 @@ const Header = ({ className, style }: HeaderProps) => {
     >
       <Link
         href="/"
-        className={cn(
+        className={classNames(
           "px-2 py-0.5",
           "bg-brand rounded-lg",
           "font-bold font-mono text-sm text-white italic sm:text-md",
