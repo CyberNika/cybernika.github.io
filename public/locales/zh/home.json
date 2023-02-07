@@ -17,5 +17,38 @@
       "say-hi": "招呼"
     },
     "learn-more": "了解更多我的故事"
+  },
+  "travel": {
+    "go-for-a-walk": "我想出去走一走",
+    "look-at-the-world": "看看这个大世界"
+  },
+  "skill": {
+    "coding": {
+      "title": "我热爱编程",
+      "believe": "相信优雅的代码和艺术",
+      "change-life": "可以改变人们的生活"
+    },
+    "challenge": {
+      "title": "我钟爱挑战",
+      "try-and-explore": "认为不断尝试和勇于探索",
+      "growth": "可以让我们成长"
+    }
+  },
+  "photography": {
+    "title": {
+      "soul-and-body": "灵魂和身体",
+      "one-the-way": "总有一个要在路上",
+      "together": "而我，更想让它们相伴而行"
+    },
+    "category": {
+      "nature": "自然",
+      "snow-mountain": "雪山",
+      "building": "建筑",
+      "street": "街头",
+      "city": "城市",
+      "human": "人",
+      "sea": "海",
+      "night": "夜晚"
+    }
   }
 }

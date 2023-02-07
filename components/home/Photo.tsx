@@ -1,23 +1,28 @@
 import Image from "next/image";
-import classNames from "classnames";
+import cn from "classnames";
+import { useTranslation } from "next-i18next";
 
 import config from "@/config";
 
 const PHOTOS = config.data.gallery.homePhotos;
 
 const HomePhoto = () => {
+  const { t } = useTranslation("home");
+
   return (
-    <div className="home-section h-screen text-center">
+    <div className="home-section text-center mb-10">
       <h3 className="home-section-title">
         <p>
-          灵魂和身体
-          <span className="home-section-title-magic">总有一个要在路上</span>
+          {t("photography.title.soul-and-body")}
+          <span className="home-section-title-magic">
+            {t("photography.title.one-the-way")}
+          </span>
         </p>
-        <p>而我，更想让它们相伴而行</p>
+        <p>{t("photography.title.together")}</p>
       </h3>
 
       <ul
-        className={classNames(
+        className={cn(
           "mt-10 -mx-1",
           "flex justify-center flex-wrap",
           "animation: 4s linear infinite alternate slideFlow;",
@@ -27,7 +32,7 @@ const HomePhoto = () => {
         {PHOTOS.map((item, index) => (
           <li
             key={index}
-            className={classNames(
+            className={cn(
               "relative m-1",
               "sm:h-20 md:h-25 h-45",
               "rounded-md overflow-hidden",

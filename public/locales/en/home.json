@@ -17,5 +17,38 @@
       "say-hi": "say hi"
     },
     "learn-more": "Learn more about my story"
+  },
+  "travel": {
+    "go-for-a-walk": "I'd like to go for a walk",
+    "look-at-the-world": "To look at the big world"
+  },
+  "skill": {
+    "coding": {
+      "title": "I like coding, believe",
+      "believe": "elegant codes and arts",
+      "change-life": " can change our lives"
+    },
+    "challenge": {
+      "title": "I love challenging, think",
+      "try-and-explore": "constant try and explore",
+      "growth": " can make us grow"
+    }
+  },
+  "photography": {
+    "title": {
+      "soul-and-body": "One of the soul and the body",
+      "one-the-way": "is always on the way",
+      "together": "And I want them to go together"
+    },
+    "category": {
+      "nature": "nature",
+      "snow-mountain": "mountain",
+      "building": "building",
+      "street": "street",
+      "city": "city",
+      "human": "human",
+      "sea": "sea",
+      "night": "night"
+    }
   }
 }

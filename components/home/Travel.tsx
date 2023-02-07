@@ -2,6 +2,7 @@ import { useState } from "react";
 import { TwoTriangles, Planet } from "@icon-park/react";
 import classNames from "classnames";
 import dynamic from "next/dynamic";
+import { useTranslation } from "next-i18next";
 
 const TravelChinaMap = dynamic(() => import("./TravelChinaMap"), {
   ssr: false,
@@ -16,13 +17,15 @@ const TRAVEL_MAP_TYPES = [
 ];
 
 const HomeTravel = () => {
+  const { t } = useTranslation("home");
+
   const [travelMapType, setTravelMapType] = useState<string>("CHINA");
 
   return (
     <div className="home-section h-screen text-center">
       <h3 className="home-section-title">
-        <p>我想出去走一走</p>
-        <p>看看这个大世界</p>
+        <p>{t("travel.go-for-a-walk")}</p>
+        <p>{t("travel.look-at-the-world")}</p>
       </h3>
 
       <div className="mt-6 overflow-hidden whitespace-nowrap h-3/5">
