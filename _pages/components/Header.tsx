@@ -14,6 +14,8 @@ const Header = ({ className, style }: HeaderProps) => {
   const router = useRouter();
   const { t } = useTranslation("common");
 
+  console.log(router);
+
   const menus = [
     {
       id: "HOME",
@@ -21,20 +23,30 @@ const Header = ({ className, style }: HeaderProps) => {
       link: "/",
       isActive: () => router.pathname === "/",
     },
-    {
-      id: "BLOG",
-      title: t("header.nav.blog"),
-      link: "/blog",
-      isActive: () => router.pathname.startsWith("/blog"),
-    },
-    // { id: 'GALLERY', title: t('header.nav.gallery'), link: '/gallery', isActive: () => router.pathname === '/' },
+    // {
+    //   id: "BLOG",
+    //   title: t("header.nav.blog"),
+    //   link: "/blog",
+    //   isActive: () => router.pathname.startsWith("/blog"),
+    // },
+    // {
+    //   id: "GALLERY",
+    //   title: t("header.nav.gallery"),
+    //   link: "/gallery",
+    //   isActive: () => router.pathname === "/gallery",
+    // },
     {
       id: "ABOUT",
       title: t("header.nav.about"),
       link: "/about",
       isActive: () => router.pathname === "/about",
     },
-    // { id: 'SAY_HI', title: t('header.nav.say-hi'), link: '/say-hi', isActive: () => router.pathname === '/say-hi' },
+    {
+      id: "SAY_HI",
+      title: t("header.nav.say-hi"),
+      link: "/#say-hi",
+      isActive: () => router.pathname === "/say-hi",
+    },
   ] as const;
 
   return (
@@ -66,7 +78,13 @@ const Header = ({ className, style }: HeaderProps) => {
           {menus.map((item) => (
             <li
               key={item.id}
-              className="mr-5 last:mr-0 opacity-50 hover:opacity-100 hover:font-bold"
+              className={classNames(
+                "mr-5 last:mr-0 opacity-50 hover:opacity-100 hover:font-bold",
+                {
+                  "font-bold": item.isActive(),
+                  "opacity-100": item.isActive(),
+                },
+              )}
             >
               <Link href={item.link}>{item.title}</Link>
             </li>
