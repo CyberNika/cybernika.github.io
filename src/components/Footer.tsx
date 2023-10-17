@@ -1,10 +1,24 @@
-const Footer = () => {
+import classNames from 'classnames';
+import { CSSProperties } from 'react';
+
+interface FooterProps {
+  className?: string;
+  style?: CSSProperties;
+}
+
+const Footer = ({ className, style }: FooterProps) => {
   return (
-    <footer className="flex flex-col lg:flex-row justify-between items-center py-4 wrapper border-t-1 border-t-gray-200 dark:border-t-slate-700 text-xs sm:text-sm gray-400">
-      <span
-        // order="2 xl:none"
-        className="mt-1 xl:mt-0"
-      >
+    <footer
+      className={classNames(
+        'flex flex-col lg:flex-row justify-between items-center',
+        'py-4 wrapper',
+        'border-t border-t-gray-200 dark:border-t-slate-700',
+        'text-xs sm:text-sm text-gray-400 dark:text-gray-800',
+        className,
+      )}
+      style={style}
+    >
+      <span className="mt-1 xl:mt-0 order-2 xl:order-none">
         <span>© 2017-2022 | </span>
         <a href="https://superstack.pro">SUPERSTACK.PRO</a>
         <span> | </span>

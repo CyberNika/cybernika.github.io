@@ -1,10 +1,10 @@
-import { registerMap, use } from "echarts/core";
-import { CanvasRenderer } from "echarts/renderers";
-import { MapChart, ScatterChart } from "echarts/charts";
-import { TooltipComponent, VisualMapComponent } from "echarts/components";
+import { registerMap, use } from 'echarts/core';
+import { CanvasRenderer } from 'echarts/renderers';
+import { MapChart, ScatterChart } from 'echarts/charts';
+import { TooltipComponent, VisualMapComponent } from 'echarts/components';
 
-import config from "@/config";
-import echarts from "@/utils/chart";
+import config from 'config';
+import echarts from '@/utils/chart';
 
 interface CityOption {
   city: string;
@@ -24,7 +24,7 @@ const FOOTPRINTS = config.data.travelMap.footprints;
 
 const makeTravelMapOptions = (data: CityOption[], map: string) => ({
   tooltip: {
-    trigger: "item",
+    trigger: 'item',
     formatter(params: { data: CityOption }) {
       return `${params.data.city}：${params.data.times || 0}`;
     },
@@ -34,27 +34,27 @@ const makeTravelMapOptions = (data: CityOption[], map: string) => ({
     max: 25,
     show: false,
     splitNumber: 5,
-    color: ["#d94e5d", "#eac736", "#50a3ba"],
+    color: ['#d94e5d', '#eac736', '#50a3ba'],
     textStyle: {
-      color: "#fff",
+      color: '#fff',
     },
   },
   geo: {
     map,
     emphasis: {
       itemStyle: {
-        areaColor: "rgba(245, 244, 237, 0.9)",
+        areaColor: 'rgba(245, 244, 237, 0.9)',
       },
     },
     itemStyle: {
-      areaColor: "rgba(255, 254, 247, 0.8)",
+      areaColor: 'rgba(255, 254, 247, 0.8)',
     },
   },
   series: [
     {
-      name: "旅行足迹",
-      type: "scatter",
-      coordinateSystem: "geo",
+      name: '旅行足迹',
+      type: 'scatter',
+      coordinateSystem: 'geo',
       data,
     },
   ],
@@ -63,11 +63,11 @@ const makeTravelMapOptions = (data: CityOption[], map: string) => ({
 export const renderChinaTravelMap = (container: HTMLElement) => {
   const chart = echarts.init(container);
 
-  import("./map/china.json").then(({ default: data }) => {
-    registerMap("china", data as any);
+  import('./map/china.json').then(({ default: data }) => {
+    registerMap('china', data as any);
 
     const chartData = Object.entries(FOOTPRINTS)
-      .filter(([_, v]) => v.country === "China")
+      .filter(([_, v]) => v.country === 'China')
       .map(([k, v]) => ({
         value: [...v.geo, v.value],
         times: v.value,
@@ -76,7 +76,7 @@ export const renderChinaTravelMap = (container: HTMLElement) => {
 
     chartData.sort((a, b) => a.value[2] - b.value[2]);
 
-    const option = makeTravelMapOptions(chartData, "china");
+    const option = makeTravelMapOptions(chartData, 'china');
 
     chart.setOption(option);
   });
@@ -87,8 +87,8 @@ export const renderChinaTravelMap = (container: HTMLElement) => {
 export const renderWorldTravelMap = (container: HTMLElement) => {
   const chart = echarts.init(container);
 
-  import("./map/world.json").then(({ default: data }) => {
-    registerMap("world", data as any);
+  import('./map/world.json').then(({ default: data }) => {
+    registerMap('world', data as any);
 
     const chartData = Object.entries(FOOTPRINTS).map(([k, v]) => ({
       value: [...v.geo, v.value],
@@ -98,7 +98,7 @@ export const renderWorldTravelMap = (container: HTMLElement) => {
 
     chartData.sort((a, b) => a.value[2] - b.value[2]);
 
-    const option = makeTravelMapOptions(chartData, "world");
+    const option = makeTravelMapOptions(chartData, 'world');
 
     chart.setOption(option);
   });

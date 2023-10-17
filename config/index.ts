@@ -1,42 +1,42 @@
-import gallery from "./gallery";
-import skillGraph from "./skill-graph";
-import travelMap from "./travel-map";
+import gallery from './gallery';
+import skillGraph from './skill-graph';
+import travelMap from './travel-map';
 
 const config = {
   nav: [
-    { text: "Home", link: "/" },
+    { text: 'Home', link: '/' },
     {
-      text: "Blog",
-      link: "/blog/",
+      text: 'Blog',
+      link: '/blog/',
     },
     {
-      text: "Works",
-      link: "/works/",
+      text: 'Works',
+      link: '/works/',
     },
     {
-      text: "Books",
+      text: 'Books',
       items: [
         {
-          text: "JavaScript 的世界",
-          link: "/books/javascript-in-the-world/introduction/what-is-javascript",
+          text: 'JavaScript 的世界',
+          link: '/books/javascript-in-the-world/introduction/what-is-javascript',
         },
-        { text: "前端面试", link: "/books/front-end-interview/" },
-        { text: "算法指南", link: "/books/algorithm/" },
+        { text: '前端面试', link: '/books/front-end-interview/' },
+        { text: '算法指南', link: '/books/algorithm/' },
       ],
     },
     {
-      text: "Gallery",
-      link: "/gallery/",
+      text: 'Gallery',
+      link: '/gallery/',
     },
     {
-      text: "About",
-      link: "/about/",
+      text: 'About',
+      link: '/about/',
     },
   ],
   resolve: {
-    blog: ["posts/blog"],
-    books: ["posts/books"],
-    gallery: ["posts/gallery"],
+    blog: ['posts/blog'],
+    books: ['posts/books'],
+    gallery: ['posts/gallery'],
   },
   data: {
     gallery,

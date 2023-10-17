@@ -1,7 +1,7 @@
-import { CSSProperties, useEffect, useRef } from "react";
-import classNames from "classnames";
+import { CSSProperties, useEffect, useRef } from 'react';
+import classNames from 'classnames';
 
-import { renderSkillGraph } from "./utils/skill";
+import { renderSkillGraph } from '../utils/skill';
 
 interface ChinaTravelMapProps {
   className?: string;
@@ -18,14 +18,16 @@ const ChinaTravelMap = ({ className, style }: ChinaTravelMapProps) => {
       skillGraph.resize();
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  return <div ref={skillGraphRef} className={classNames(className)} style={style} />;
+  return (
+    <div ref={skillGraphRef} className={classNames(className)} style={style} />
+  );
 };
 
 export default ChinaTravelMap;

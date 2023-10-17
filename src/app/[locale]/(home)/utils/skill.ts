@@ -1,10 +1,10 @@
-import { use } from "echarts/core";
-import { CanvasRenderer } from "echarts/renderers";
-import { GraphChart } from "echarts/charts";
-import {} from "echarts/components";
+import { use } from 'echarts/core';
+import { CanvasRenderer } from 'echarts/renderers';
+import { GraphChart } from 'echarts/charts';
+import {} from 'echarts/components';
 
-import config from "@/config";
-import echarts from "@/utils/chart";
+import config from 'config';
+import echarts from '@/utils/chart';
 
 use([CanvasRenderer, GraphChart]);
 
@@ -37,7 +37,7 @@ export const renderSkillGraph = (container: HTMLElement) => {
       if (categories.length) {
         link.target = categories[categories.length - 1].name;
         link.lineStyle = {
-          color: "rgba(128, 128, 128, 0.3)",
+          color: 'rgba(128, 128, 128, 0.3)',
         };
       }
 
@@ -51,17 +51,17 @@ export const renderSkillGraph = (container: HTMLElement) => {
   const option = {
     series: [
       {
-        name: "技术关键词",
-        type: "graph",
+        name: '技术关键词',
+        type: 'graph',
         data,
         links,
         categories,
         emphasis: {
-          focus: "adjacency",
+          focus: 'adjacency',
         },
         label: {
           show: true,
-          position: "top",
+          position: 'top',
         },
       },
     ],

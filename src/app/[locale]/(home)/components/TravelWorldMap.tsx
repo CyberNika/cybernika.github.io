@@ -1,7 +1,8 @@
-import { CSSProperties, useEffect, useRef } from "react";
-import classNames from "classnames";
+import { CSSProperties, useEffect, useRef } from 'react';
 
-import { renderWorldTravelMap } from "./utils/travel";
+import classNames from 'classnames';
+
+import { renderWorldTravelMap } from '../utils/travel';
 
 interface WorldTravelMapProps {
   className?: string;
@@ -18,14 +19,16 @@ const WorldTravelMap = ({ className, style }: WorldTravelMapProps) => {
       mapChart.resize();
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  return <div ref={mapChartRef} className={classNames(className)} style={style} />;
+  return (
+    <div ref={mapChartRef} className={classNames(className)} style={style} />
+  );
 };
 
 export default WorldTravelMap;

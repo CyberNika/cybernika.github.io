@@ -37,6 +37,14 @@
     @apply text-4xl font-bold font-serif mb-6;
   }
 
+  .pt-header {
+    padding-top: var(--header-height);
+  }
+
+  .mt-header {
+    margin-top: var(--header-height);
+  }
+
   .link {
     @apply underline underline-offset-4 font-bold decoration-divider-light dark:decoration-divider-dark hover:opacity-90;
    }

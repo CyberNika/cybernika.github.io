@@ -5,9 +5,10 @@
     "nav": {
       "home": "Home",
       "blog": "Blog",
+      "works": "Works",
+      "books": "Books",
       "gallery": "Gallery",
-      "about": "About",
-      "say-hi": "Say hi"
+      "about": "About"
     },
     "button": {
       "toggle-mode": "Toggle dark/light mode",
