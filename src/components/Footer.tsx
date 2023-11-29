@@ -20,7 +20,7 @@ const Footer = ({ className, style }: FooterProps) => {
     >
       <span className="mt-1 xl:mt-0 order-2 xl:order-none">
         <span>© 2017-2022 | </span>
-        <a href="https://superstack.pro">SUPERSTACK.PRO</a>
+        <a href="https://cybernika.net">CYBERNIKA.NET</a>
         <span> | </span>
         <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
           京ICP备18064894号-1
@@ -29,8 +29,8 @@ const Footer = ({ className, style }: FooterProps) => {
 
       <span className="font-mono">
         <span>Created with ❤ by </span>
-        <a href="https://github.com/SuperStackPro" target="__blank">
-          Stephen
+        <a href="https://github.com/CyberNika" target="__blank">
+          Nika
         </a>
       </span>
     </footer>

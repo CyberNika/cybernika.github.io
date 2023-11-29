@@ -39,7 +39,7 @@ $.ajax({
   type: 'POST',
   url: "api.php/CustomerLogin/login",
   data: {
-    username: 'Stephen',
+    username: 'Nika',
     password: 'javascript',
     uuid: 'web_javascript'
   },
@@ -209,7 +209,7 @@ function Person(name, gender, age) {
   return obj;
 }
 
-var stephen = new Person('Stephen', 'male', '21');
+var stephen = new Person('Nika', 'male', '21');
 stephen.tellAge();
 ```
 
@@ -224,7 +224,7 @@ function Person(name, gender, age) {
   };
 }
 
-var stephen = new Person('Stephen', 'male', '21');
+var stephen = new Person('Nika', 'male', '21');
 stephen.tellAge();
 ```
 
@@ -240,7 +240,7 @@ Person.prototype.tellAge = function () {
   console.log(this.age);
 };
 
-var stephen = new Person('Stephen', 'male', '21');
+var stephen = new Person('Nika', 'male', '21');
 stephen.tellAge();
 ```
 
@@ -261,7 +261,7 @@ class Person {
   }
 }
 
-var stephen = new Person('Stephen', 'male', '21');
+var stephen = new Person('Nika', 'male', '21');
 stephen.tellAge();
 ```
 
