@@ -15,9 +15,9 @@ const OtherShow = () => {
     const gitalk = new (window as any).Gitalk({
       clientID: "804e292e507bd1aed363",
       clientSecret: "cab3e3f17bd07094c51f28bf97ffbe62c072143f",
-      repo: "heynext.github.io",
-      owner: "heynext",
-      admin: ["heynext"],
+      repo: "cybernika.github.io",
+      owner: "CyberNika",
+      admin: ["CyberNika"],
       number: 4,
     });
 

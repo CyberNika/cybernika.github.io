@@ -30,7 +30,7 @@ const Layout: FC = ({ children }) => {
         <Link to="/" className="header-left">
           <MultiFunctionKnife className="header-logo" />
 
-          <h3 className="header-title">HEY NEXT</h3>
+          <h3 className="header-title">CYBER NIKA</h3>
         </Link>
 
         <nav className="header-nav">
@@ -60,7 +60,7 @@ const Layout: FC = ({ children }) => {
 
       <footer className="footer container">
         <span className="copyright">
-          © 2017-2021 | <a href="https://heynext.xyz">HEYNEXT.XYZ</a> |&nbsp;
+          © 2017-2021 | <a href="https://cybernika.net">CYBERNIKA.NET</a> |&nbsp;
           <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
             京ICP备18064894号-1
           </a>
@@ -68,8 +68,8 @@ const Layout: FC = ({ children }) => {
 
         <span className="mono author">
           Created with ❤ by{" "}
-          <a href="https://github.com/heynext" target="__blank">
-            Stephen
+          <a href="https://github.com/CyberNika" target="__blank">
+            Nika
           </a>
         </span>
       </footer>

@@ -1,9 +1,9 @@
 {
-  "name": "heynext.github.io",
+  "name": "cybernika.github.io",
   "version": "1.0.0",
   "private": true,
-  "description": "heynext's homepage",
-  "author": "heynext <heynext.xyz@gmail.com>",
+  "description": "CyberNika's homepage",
+  "author": "CyberNika <cybernika.net@gmail.com>",
   "keywords": [
     "gatsby"
   ],

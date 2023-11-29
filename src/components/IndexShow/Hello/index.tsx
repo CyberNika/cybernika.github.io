@@ -18,7 +18,7 @@ const HelloShow = () => {
     <div className="container container-R hello-show">
       <div className="content animate__animated animate__fadeIn animate__slow">
         <h1 className="title">
-          <p>嗨，我是 Stephen</p>
+          <p>嗨，我是 Nika</p>
           <p>
             很开心在这里<span className="meet-you">遇见你 🎈</span>
           </p>

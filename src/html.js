@@ -13,10 +13,10 @@ export default function HTML(props) {
         />
         <meta
           name="keywords"
-          content="heynext,博客,前端,JavaScript,旅行,你好世界,赵学兵,Stephen"
+          content="CyberNika,博客,前端,JavaScript,旅行,你好世界,Nika"
           id="metakeywords"
         />
-        <meta name="description" content="HEYNEXT 的个人主页" id="metadesc" />
+        <meta name="description" content="CyberNika 的个人主页" id="metadesc" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <title>你好 · 世界 | 你好 · 未来</title>
         <link
