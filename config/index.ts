@@ -1,6 +1,7 @@
 import gallery from './gallery';
 import skillGraph from './skill-graph';
 import travelMap from './travel-map';
+import sportBubble from './sport-bubble';
 
 const config = {
   nav: [
@@ -42,6 +43,7 @@ const config = {
     gallery,
     skillGraph,
     travelMap,
+    sportBubble,
   },
 };
 

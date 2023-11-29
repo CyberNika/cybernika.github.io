@@ -43,7 +43,7 @@ const HomePhoto = () => {
             {/* <Image src={item.thumb} alt={item.name} /> */}
             <img src={item.thumb} alt={item.name} />
             <label
-              className="absolute bottom-3 left-4 text-white"
+              className="absolute bottom-3 left-4 text-white text-base"
               style={{ textShadow: '0 0 6px #333' }}
             >
               {item.name}

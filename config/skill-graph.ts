@@ -1,7 +1,7 @@
 const skills = [
   /**
-     * 一级分类
-     */
+   * 一级分类
+   */
   { name: '运动', x: 5, y: -2, symbolSize: 14 },
   { name: '服务端', x: 22, y: 1, symbolSize: 14 },
   { name: 'Web 前端', x: 45, y: -3, symbolSize: 14 },
@@ -10,8 +10,8 @@ const skills = [
   { name: '艺术', x: 100, y: 2, symbolSize: 14 },
 
   /**
-    * Web 前端
-    */
+   * Web 前端
+   */
   { name: 'JavaScript', category: 'Web 前端', x: 58, y: 6, symbolSize: 12 },
   { name: 'Node.js', category: 'JavaScript', x: 50, y: 14 },
   { name: 'jQuery', category: 'JavaScript', x: 60, y: -2 },
@@ -36,29 +36,29 @@ const skills = [
   { name: '微前端', category: 'Web 前端', x: 50, y: 8, symbolSize: 12 },
 
   /**
-    * 服务端
-    */
+   * 服务端
+   */
   { name: 'Golang', category: '服务端', x: 15, y: -13, symbolSize: 12 },
   { name: 'Java', category: '服务端', x: 25, y: -10, symbolSize: 12 },
   { name: 'PHP', category: '服务端', x: 23, y: 10, symbolSize: 12 },
   { name: 'Python', category: '服务端', x: 14, y: 4, symbolSize: 12 },
 
   /**
-    * 客户端
-    */
+   * 客户端
+   */
   { name: 'Flutter', category: '客户端', x: 71, y: -10, symbolSize: 12 },
   { name: 'Kotlin', category: '客户端', x: 82, y: 15, symbolSize: 12 },
   { name: 'Swift', category: '客户端', x: 78, y: 6, symbolSize: 12 },
 
   /**
-    * 游戏
-    */
+   * 游戏
+   */
   { name: 'Cocos Creator', category: '游戏', x: 82, y: -8, symbolSize: 12 },
   { name: 'Threejs', category: '游戏', x: 82, y: 3, symbolSize: 12 },
 
   /**
-    * 艺术
-    */
+   * 艺术
+   */
   { name: '绘画', category: '艺术', x: 105, y: 6, symbolSize: 12 },
   { name: 'Procreate', category: '绘画', x: 102, y: 15 },
 
@@ -77,8 +77,8 @@ const skills = [
   { name: '乌克丽丽', category: '音乐', x: 108, y: -14 },
 
   /**
-    * 运动
-    */
+   * 运动
+   */
   { name: '滑雪', category: '运动', x: 3, y: -15, symbolSize: 12 },
   { name: '滑板', category: '运动', x: 13, y: -5, symbolSize: 12 },
   { name: '跑酷', category: '运动', x: 8, y: -9, symbolSize: 12 },
@@ -90,11 +90,11 @@ const skills = [
   { name: '保龄球', category: '球类', x: 5, y: 15 },
   { name: '篮球', category: '球类', x: 16, y: 14 },
   { name: '羽毛球', category: '球类', x: 16, y: 8 },
-]
+];
 
 const skillGraphOptions = {
   name: '技能关键词',
   skills,
-}
+};
 
-export default skillGraphOptions
+export default skillGraphOptions;

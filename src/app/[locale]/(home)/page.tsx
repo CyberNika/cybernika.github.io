@@ -1,6 +1,6 @@
 'use client';
 
-import { Hello, Travel, Skill, Photo } from './components';
+import { Hello, Travel, Skill, Sport, Photo } from './components';
 
 import './page.css';
 
@@ -10,6 +10,7 @@ const IndexPage = () => {
       <Hello />
       <Travel />
       <Skill />
+      <Sport />
       <Photo />
     </div>
   );
