@@ -1,6 +1,8 @@
 import React, { FC, useMemo, useState } from "react";
-import { MultiFunctionKnife, SunOne, Moon } from "@icon-park/react";
+import { SunOne, Moon } from "@icon-park/react";
 import { Link } from "gatsby";
+
+import LOGO from '@/assets/icons/logo.png';
 
 import "./index.less";
 
@@ -12,7 +14,7 @@ const MENUS = [
   { id: "SAY_HI", title: "留言", link: "/#say-hi" },
 ];
 
-const Layout: FC = ({ children }) => {
+const Layout: FC = ({ location, children }) => {
   const [theme, setTheme] = useState("light");
 
   const isDark = useMemo(() => theme === "dark", [theme]);
@@ -24,11 +26,14 @@ const Layout: FC = ({ children }) => {
     document.documentElement.classList.toggle("dark");
   };
 
+  const origin = typeof window !== "undefined" ? window.location.origin : ""
+  const host = typeof window !== "undefined" ? window.location.host : ""
+
   return (
     <div className="layout">
       <header className="header container">
         <Link to="/" className="header-left">
-          <MultiFunctionKnife className="header-logo" />
+          <img src={LOGO} className="header-logo" />
 
           <h3 className="header-title">CYBER NIKA</h3>
         </Link>
@@ -60,7 +65,7 @@ const Layout: FC = ({ children }) => {
 
       <footer className="footer container">
         <span className="copyright">
-          © 2017-2021 | <a href="https://cybernika.net">CYBERNIKA.NET</a> |&nbsp;
+          © 2017-2023 | <a href={origin}>{host.toUpperCase()}</a> |&nbsp;
           <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
             京ICP备18064894号-1
           </a>

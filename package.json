@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -b ghpages",
+    "deploy": "rm -fr public && gatsby build && gh-pages -d public -b ghpages",
     "prettier": "prettier --write 'src/**/*.{css,md,json}'",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}'"
